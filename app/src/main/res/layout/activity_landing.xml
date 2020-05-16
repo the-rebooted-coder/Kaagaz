@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/productsansbold"
         android:text="@string/hello_welcome_to_kaagaz"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
@@ -28,7 +28,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="@font/productsans"
         android:text="@string/in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -37,14 +37,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
 
     <Button
         android:id="@+id/starter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_blue_dark"
+        android:fontFamily="@font/productsans"
         android:text="@string/ignore_battery_optimisations"
         android:textColor="@android:color/background_light"
         android:textSize="16sp"
@@ -53,13 +54,14 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:fontFamily="@font/productsansitalic"
         android:text="@string/after_doing_the_above_step_restart_the_app_and_voila_your_dynamic_desktop_will_be_delievered_to_you_in_moments"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -68,32 +70,38 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/device_ro_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/tip"
+        android:fontFamily="@font/productsans"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/battery"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_orange_light"
-        android:textSize="13sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/starter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <Button
+        android:id="@+id/extra_ins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="41dp"
+        android:background="@android:color/holo_red_light"
+        android:fontFamily="@font/productsans"
+        android:text="@string/turn_off_battery_restrictions"
+        android:textColor="@android:color/primary_text_dark"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/starter" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

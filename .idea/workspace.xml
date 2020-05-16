@@ -2,7 +2,10 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel_2" />
+        <device id="pixel_3" />
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
@@ -43,6 +46,9 @@
     <option name="KEY_ALIAS" value="anshu" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bw901Ef0c2T7Pb4YnzuEifTALr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -50,7 +56,7 @@
     <property name="BundleExportedModule" value="app" />
     <property name="ExportApk.ApkPath" value="C:\Users\raffl\Documents\GitHub\Kaagaz\app" />
     <property name="ExportApk.BuildVariants" value="release" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../key.jks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Final/app/src/main/java/com/aaxena/gailofficersassociation/Dashboard.java" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -145,5 +151,18 @@
       <updated>1589532061538</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
