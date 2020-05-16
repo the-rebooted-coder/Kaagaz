@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kaagaz</string>
+    <string name="set">set</string>
+    <string name="todo">TODO</string>
+    <string name="in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations">In order to get functionality of Dynamic Wallpaper which changes throughout the day, Kaagaz Requires to Keep a Background Service Running.\n\nDue to Limitations of Android System you\'ll need to Disable Battery Optimisations\n\nThe Battery Consumption is negligible.\n\nNO DATA IS SENT ANYWHERE NEITHER STORED EVER, No Permission is required to run Kaagaz </string>
+    <string name="hello_welcome_to_kaagaz">Hello, Welcome to Kaagaz</string>
+    <string name="ignore_battery_optimisations">Ignore Battery Optimisations</string>
+    <string name="battery"><![CDATA[Navigate To Battery>Battery optimisation>Tap NOT OPTIMISED>All apps>Kaagaz>Don\'t Optimise or ANY OTHER BATTERY EXCLUSIONS AVAILABLE]]></string>
+    <string name="after_doing_the_above_step_restart_the_app_and_voila_your_dynamic_desktop_will_be_delievered_to_you_in_moments">After Doing The Above Step, Restart the App and Voila! Your Dynamic Desktop will be then delivered to you in a while!</string>
+    <string name="tip">TIP: To achieve the best results, try restarting during the last few minutes of the current hour!</string>
+</resources>
