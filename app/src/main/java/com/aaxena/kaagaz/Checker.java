@@ -15,6 +15,8 @@ public class Checker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(23);
 
         String packageName = getPackageName();
         PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
@@ -26,7 +28,7 @@ public class Checker extends AppCompatActivity {
         else {
             Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v8.vibrate(26);
-            Intent i=new Intent(Checker.this,MainActivity.class);
+            Intent i=new Intent(Checker.this,Choose.class);
             startActivity(i);
             finish();
         }

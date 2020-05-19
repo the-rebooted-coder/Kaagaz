@@ -11,7 +11,6 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class MainActivity extends Activity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +22,9 @@ public class MainActivity extends Activity {
         AlarmManager manager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
                 Toast.makeText(this, "Welcome to Kaagaz, Wallpaper Service Started, Wallpaper Will be Delivered in moments", Toast.LENGTH_LONG).show();
                 Calendar c = Calendar.getInstance();
-                c.add(Calendar.SECOND, 10);
-                c.set(Calendar.HOUR,12);
-                manager.setRepeating(AlarmManager.RTC, AlarmManager.INTERVAL_HOUR, AlarmManager.INTERVAL_HOUR, alarmIntent);
+                c.set(Calendar.HOUR_OF_DAY, 12);
+                c.add(Calendar.SECOND,10);
+                manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
         finish();
     }
 }

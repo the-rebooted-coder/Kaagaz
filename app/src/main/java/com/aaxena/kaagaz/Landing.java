@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.view.View;
@@ -24,6 +25,26 @@ public class Landing extends AppCompatActivity {
         //Determining Manufacturer
         determineManufacture();
 
+        //Checker Fun
+        Button checker = findViewById(R.id.checker);
+        checker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String packageName = getPackageName();
+                PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
+                if (!pm.isIgnoringBatteryOptimizations(packageName)){
+                    Toast.makeText(Landing.this, R.string.err_not_opt,Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v8.vibrate(26);
+                    Toast.makeText(Landing.this, R.string.sucsful,Toast.LENGTH_SHORT).show();
+                    Intent i=new Intent(Landing.this,Choose.class);
+                    startActivity(i);
+                    finish();
+                }
+            }
+        });
 
         Button starter = findViewById(R.id.starter);
         starter.setOnClickListener(new View.OnClickListener() {
@@ -43,14 +64,13 @@ public class Landing extends AppCompatActivity {
                     } else if ("vivo".equalsIgnoreCase(manufacturer)) {
                         intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
                         startActivity(intent);
-                    }
-                    else {
-                        Intent i=new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                    } else {
+                        Intent i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
                         i.setData(Uri.parse("package:" + getPackageName()));
                         startActivity(i);
                     }
                 } catch (Exception e) {
-                    Toast.makeText(Landing.this, R.string.err_msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(Landing.this, R.string.err_msg, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -67,7 +87,7 @@ public class Landing extends AppCompatActivity {
             extra.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(Landing.this,"Go to Battery Saver",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Landing.this, "Go to Battery Saver", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                     Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v8.vibrate(25);
@@ -76,14 +96,13 @@ public class Landing extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-        }
-        else if ("oppo".equalsIgnoreCase(ro_build)){
+        } else if ("oppo".equalsIgnoreCase(ro_build)) {
             ro_device.setText(R.string.oppo);
             extra.setVisibility(View.VISIBLE);
             extra.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(Landing.this,"Find Battery Exclusions",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Landing.this, "Find Battery Exclusions", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                     Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v8.vibrate(25);
@@ -92,14 +111,13 @@ public class Landing extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-        }
-        else if ("vivo".equalsIgnoreCase(ro_build)){
+        } else if ("vivo".equalsIgnoreCase(ro_build)) {
             ro_device.setText(R.string.vivo);
             extra.setVisibility(View.VISIBLE);
             extra.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(Landing.this,"Find Battery Exclusions",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Landing.this, "Find Battery Exclusions", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                     Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v8.vibrate(25);
