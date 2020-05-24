@@ -26,20 +26,20 @@ public class Landing extends AppCompatActivity {
         determineManufacture();
 
         //Checker Fun
-        Button checker = findViewById(R.id.checker);
+        final Button checker = findViewById(R.id.checker);
         checker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String packageName = getPackageName();
                 PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
                 if (!pm.isIgnoringBatteryOptimizations(packageName)){
-                    Toast.makeText(Landing.this, R.string.err_not_opt,Toast.LENGTH_LONG).show();
+                    Toast.makeText(Landing.this, R.string.err_not_opt,Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v8.vibrate(26);
                     Toast.makeText(Landing.this, R.string.sucsful,Toast.LENGTH_SHORT).show();
-                    Intent i=new Intent(Landing.this,Choose.class);
+                    Intent i=new Intent(Landing.this,SplashScreen.class);
                     startActivity(i);
                     finish();
                 }
@@ -58,16 +58,20 @@ public class Landing extends AppCompatActivity {
                     if ("xiaomi".equalsIgnoreCase(manufacturer)) {
                         intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
                         startActivity(intent);
+                        checker.setVisibility(View.VISIBLE);
                     } else if ("oppo".equalsIgnoreCase(manufacturer)) {
                         intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
                         startActivity(intent);
+                        checker.setVisibility(View.VISIBLE);
                     } else if ("vivo".equalsIgnoreCase(manufacturer)) {
                         intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
                         startActivity(intent);
+                        checker.setVisibility(View.VISIBLE);
                     } else {
                         Intent i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
                         i.setData(Uri.parse("package:" + getPackageName()));
                         startActivity(i);
+                        checker.setVisibility(View.VISIBLE);
                     }
                 } catch (Exception e) {
                     Toast.makeText(Landing.this, R.string.err_msg, Toast.LENGTH_LONG).show();

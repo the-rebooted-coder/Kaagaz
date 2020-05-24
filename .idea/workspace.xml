@@ -20,6 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.225.128:5555" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -36,6 +37,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -55,7 +58,7 @@
     <property name="BundleExportedModule" value="app" />
     <property name="ExportApk.ApkPath" value="C:\Users\raffl\Documents\GitHub\Kaagaz\app" />
     <property name="ExportApk.BuildVariants" value="release" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Final/app/src/main/java/com/aaxena/gailofficersassociation/Getter.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -64,6 +67,9 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aaxena.kaagaz" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -2,9 +2,9 @@
     <string name="app_name">Kaagaz</string>
     <string name="set">set</string>
     <string name="todo">TODO</string>
-    <string name="in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations">In order to get the CORE functionality of Dynamic Wallpaper which changes throughout the day, Kaagaz Requires to Keep a Background Service Running.\n\nDue to Limitations of Android System you\'ll need to Disable Battery Optimisations for only this app\n\nOtherwise the Wallpapers won\'t change with time and will be always static. The Battery Consumption is negligible.\n\nYou may Decline the Prompt, however declining the Prompt will set a static wallpaper that will not be dynamic </string>
+    <string name="in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations">In order to get the functionality of Dynamic Wallpapers which changes throughout the day, Kaagaz Requires to Keep a Service Running.\n\nDue to Limitations of Android System you\'ll need to Allow Kaagaz through Battery Saver\n\nOtherwise the Wallpapers won\'t change with time and will be static. The Battery Consumption is negligible.</string>
     <string name="hello_welcome_to_kaagaz">Hello, Welcome to Kaagaz</string>
-    <string name="ignore_battery_optimisations">Ignore Battery Optimisations</string>
+    <string name="ignore_battery_optimisations">Allow Kaagaz</string>
     <string name="battery"><![CDATA[Navigate To Battery>Battery optimisation>Tap NOT OPTIMISED>All apps>Kaagaz>Don\'t Optimise or ANY OTHER BATTERY EXCLUSIONS AVAILABLE]]></string>
     <string name="after_doing_the_above_step_restart_the_app_and_voila_your_dynamic_desktop_will_be_delievered_to_you_in_moments">After Doing The Above Step, Restart the App and Voila! Your Dynamic Desktop will be then delivered to you in a while!</string>
     <string name="err_msg">Error Initializing Startup Service, Turn off Battery Optimisations to Start</string>
@@ -13,8 +13,20 @@
     <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. If not available restart the app!</string>
     <string name="turn_off_battery_restrictions">Turn Off Battery Restrictions</string>
     <string name="check">Check</string>
+
     <string name="err_not_opt">Not Yet, Try Completing Steps Again!</string>
     <string name="choose_your_desktop_view">Choose Your Desktop View</string>
-    <string name="restarter">Great Choice!</string>
+    <string name="restarter">Please Wait!</string>
     <string name="sucsful">Great</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="apply">Apply</string>
+    <string name="choose_a_view">Choose a View</string>
+    <string name="moon_background">moon_background</string>
+    <string name="suggestion">Works Best if Used With More Than 2 Pages Home Screen</string>
+    <string name="mojave_desert_image">Mojave Desert Image</string>
+    <string name="celestial_onetime">The Celestial Wallpaper Changes based on the Current Moon Phase</string>
+    <string name="intro_msg">Welcome to Kaagaz! </string>
+    <string name="stop_wallpaper_service">Stop Wallpaper Service</string>
 </resources>

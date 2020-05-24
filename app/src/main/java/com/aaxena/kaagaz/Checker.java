@@ -28,7 +28,7 @@ public class Checker extends AppCompatActivity {
         else {
             Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v8.vibrate(26);
-            Intent i=new Intent(Checker.this,Choose.class);
+            Intent i=new Intent(Checker.this,SplashScreen.class);
             startActivity(i);
             finish();
         }

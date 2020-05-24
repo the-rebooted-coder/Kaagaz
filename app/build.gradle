@@ -8,15 +8,16 @@ android {
         applicationId "com.aaxena.kaagaz"
         minSdkVersion 25
         targetSdkVersion 29
-        versionCode 5
-        versionName "xen_build_five_release"
+        versionCode 10
+        versionName "xen_build_eight_release"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -28,7 +29,10 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.github.florent37:diagonallayout:1.0.9'
+    implementation 'com.github.jesgs:moonfx:v1.0.1'
+    implementation "com.airbnb.android:lottie:3.4.0"
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
