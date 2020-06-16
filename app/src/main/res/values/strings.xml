@@ -10,9 +10,9 @@
     <string name="err_msg">Error Initializing Startup Service, Turn off Battery Optimisations to Start</string>
     <string name="xiaomi">Based on Your Xiaomi Device, You\'ll need to disable Battery Saver to \'NO Restrictions\'</string>
     <string name="oppo">Based on Your Oppo Device, You\'ll need to disable Battery Related Exclusions. If not available restart the app!</string>
-    <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. If not available restart the app!</string>
+    <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. Open iManager and exclude Kaagaz from Battery Section</string>
     <string name="turn_off_battery_restrictions">Turn Off Battery Restrictions</string>
-    <string name="check">Check</string>
+    <string name="check">Start Kaagaz</string>
 
     <string name="err_not_opt">Not Yet, Try Completing Steps Again!</string>
     <string name="choose_your_desktop_view">Choose Your Desktop View</string>

@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="kaagaz_loader.json"
+        app:lottie_fileName="kaagaz_night_loader.json"
         app:lottie_loop="true" />
 
     <TextView

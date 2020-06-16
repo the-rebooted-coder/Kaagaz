@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.aaxena.kaagaz"
-        minSdkVersion 25
+        minSdkVersion 23
         targetSdkVersion 29
-        versionCode 10
-        versionName "xen_build_eight_release"
+        versionCode 11
+        versionName "xen_build_eleven_release"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
