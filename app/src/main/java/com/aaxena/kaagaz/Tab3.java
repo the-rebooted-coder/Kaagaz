@@ -72,6 +72,19 @@ public class Tab3 extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         view3 = inflater.inflate(R.layout.fragment_tab3, container, false);
         Button upButton = view3.findViewById(R.id.moon);
+        Button suggest = view3.findViewById(R.id.suggest);
+        suggest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(22);
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("This Wallpaper Changes According to the Moon Phase")
+                        .setMessage(R.string.suggestion)
+                        .setPositiveButton("Okay", null)
+                        .create().show();
+            }
+        });
         upButton.setOnClickListener(this);
 
         return view3;
