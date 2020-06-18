@@ -25,7 +25,10 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         loadPerfs();
+
+
         Intent launchIntent = new Intent(this, AlarmService.class);
         PendingIntent alarmIntent = PendingIntent.getService(this, 0, launchIntent, 0);
 
