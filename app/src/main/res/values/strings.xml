@@ -11,7 +11,7 @@
     <string name="xiaomi">Based on Your Xiaomi Device, You\'ll need to disable Battery Saver to \'NO Restrictions\'</string>
     <string name="oppo">Based on Your Oppo Device, You\'ll need to disable Battery Related Exclusions. If not available restart the app!</string>
     <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. Open iManager and exclude Kaagaz from Battery Section</string>
-    <string name="turn_off_battery_restrictions">Turn Off Battery Restrictions</string>
+    <string name="turn_off_battery_restrictions">Set \'No Restrictions\' under Battery Saver</string>
     <string name="check">Start Kaagaz</string>
 
     <string name="err_not_opt">Not Yet, Try Completing Steps Again!</string>
@@ -29,4 +29,5 @@
     <string name="celestial_onetime">The Celestial Wallpaper Changes based on the Current Moon Phase</string>
     <string name="intro_msg">Welcome to Kaagaz! </string>
     <string name="stop_wallpaper_service">Stop Wallpaper Service</string>
+    <string name="suggestion2">High Quality Wallpaper, Takes some time to be applied for the first time!</string>
 </resources>

@@ -8,8 +8,8 @@ android {
         applicationId "com.aaxena.kaagaz"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 11
-        versionName "xen_build_eleven_release"
+        versionCode 12
+        versionName "xen_build_tweleve_release"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
