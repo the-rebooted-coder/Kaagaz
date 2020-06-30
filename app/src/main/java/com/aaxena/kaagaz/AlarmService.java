@@ -12,8 +12,6 @@ import android.widget.Toast;
 import com.jesgs.moonfx.MoonFx;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 

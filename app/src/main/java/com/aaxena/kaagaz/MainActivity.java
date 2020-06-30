@@ -64,12 +64,12 @@ public class MainActivity extends Activity {
         }
         else {
             AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
             setWallpaperIsland();
             Calendar c = Calendar.getInstance();
-            c.set(Calendar.HOUR_OF_DAY, 12);
+            c.set(Calendar.HOUR_OF_DAY, 11);
             c.add(Calendar.SECOND, 5);
-            manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
-            Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
+            manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
             finish();
         }
     }

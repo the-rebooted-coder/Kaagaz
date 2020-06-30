@@ -1,23 +1,14 @@
 package com.aaxena.kaagaz;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
-
-import android.app.WallpaperManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.tabs.TabLayout;
-import com.jesgs.moonfx.MoonFx;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
-import java.io.IOException;
-import java.util.Date;
+import com.google.android.material.tabs.TabLayout;
 
 public class DeployedChooser extends AppCompatActivity {
 
