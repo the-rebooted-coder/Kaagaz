@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
             Calendar c = Calendar.getInstance();
             c.set(Calendar.HOUR_OF_DAY, 12);
             c.add(Calendar.SECOND, 5);
-            manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
+            manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
             finish();
         }
         else if (identifier.contains("moon")){

@@ -1,5 +1,7 @@
 package com.aaxena.kaagaz;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.app.WallpaperManager;
 import android.content.Intent;
@@ -23,6 +25,17 @@ public class AlarmService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         loadPerfs();
+        MoonFx moonFx = new MoonFx();
+        moonFx.setDate(new Date());
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+        if (moonFx.getSynodicPhase() >= 6 && moonFx.getSynodicPhase() < 7 && timeOfDay >= 19 && timeOfDay < 20|| moonFx.getSynodicPhase() >= 19 && moonFx.getSynodicPhase() < 21 && timeOfDay >= 19 && timeOfDay < 20) {
+            Intent intent1 = new Intent(AlarmService.this, ReminderBroadcast.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(AlarmService.this, 0, intent1, 0);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            long tenSecondsInMillis = 1 + 10;
+            alarmManager.set(AlarmManager.RTC_WAKEUP, tenSecondsInMillis, pendingIntent);
+        }
         if (hello.contains("mojave")) {
             //Setting Wallpaper for Mojave Desert
             setWallpaperMojave();
@@ -484,6 +497,11 @@ public class AlarmService extends Service {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (moonFx.getSynodicPhase() >= 6 && moonFx.getSynodicPhase() < 7) {
+            Intent intent1 = new Intent(AlarmService.this, ReminderBroadcast.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(AlarmService.this, 0, intent1, 0);
+            AlarmManager alarmManager =(AlarmManager)getSystemService(ALARM_SERVICE);
+            long tenSecondsInMillis = 1+10;
+            alarmManager.set(AlarmManager.RTC_WAKEUP, tenSecondsInMillis, pendingIntent);
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.thirteen_three);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
@@ -576,6 +594,11 @@ public class AlarmService extends Service {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (moonFx.getSynodicPhase() >= 19 && moonFx.getSynodicPhase() < 21) {
+            Intent intent1 = new Intent(AlarmService.this, ReminderBroadcast.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(AlarmService.this, 0, intent1, 0);
+            AlarmManager alarmManager =(AlarmManager)getSystemService(ALARM_SERVICE);
+            long tenSecondsInMillis = 1+10;
+            alarmManager.set(AlarmManager.RTC_WAKEUP, tenSecondsInMillis, pendingIntent);
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.five_three);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
