@@ -4,12 +4,12 @@
 [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 <br>
 
-## A Repository Consisting of an Android Package that changes wallpaper of any android device running (Oreo) throughout by the time of the day
+## A Repository Consisting of an Android Package that changes wallpaper of any android device running (Marshmallow+) throughout by the time of the day
 <br>
 <p>Created by the virtue of a Simple Idea, "Can't Android Phones Have a Simple Dynamic Background?"</p>
 <br>
 #### Kaagaz
-<p>English:Paper is a Clean.Simple.Slate App that provides the gorgeousness of Mojave Desert with the Ease of Tap.<p>
+<p>English:Paper is a Clean.Simple.Slate App that provides the gorgeousness of Landscapes & Moon with the Ease of Tap.<p>
   <br>
   <p>Just by installing and Openeing Kagaz Once, would enable it to change your desktop <b>dynamically using the sun's azimuth and time</b><br>
    </p>
