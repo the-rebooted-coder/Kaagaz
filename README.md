@@ -8,7 +8,7 @@
 <br>
 <p>Created by the virtue of a Simple Idea, "Can't Android Phones Have a Simple Dynamic Background?"</p>
 <br>
-#### Kaagaz
+<b>Kaagaz</b>
 <p>English:Paper is a Clean.Simple.Slate App that provides the gorgeousness of Landscapes & Moon with the Ease of Tap.<p>
   <br>
   <p>Just by installing and Openeing Kagaz Once, would enable it to change your desktop <b>dynamically using the sun's azimuth and time</b><br>
