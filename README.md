@@ -15,7 +15,7 @@
    </p>
    <b>Installation procedure:<b>Simple--></b>
   <ul>
-    <li>Head Towards Packages and Download App ko install</li>
+    <li>Head Towards Play Store via link and Download App to install</li>
   </ul>
   
  <b>Project</b>
