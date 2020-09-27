@@ -1,7 +1,6 @@
 package com.aaxena.kaagaz;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -69,6 +70,8 @@ public class Tab4 extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view4 = inflater.inflate(R.layout.fragment_tab4, container, false);
+        ImageView imageViewa = view4.findViewById(R.id.imageView);
+        Glide.with(this).load(R.drawable.big1).centerCrop().into(imageViewa);
         Button upButton = view4.findViewById(R.id.island);
         upButton.setOnClickListener(this);
 
@@ -78,7 +81,7 @@ public class Tab4 extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(24);
+        vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(TEXT,"island");

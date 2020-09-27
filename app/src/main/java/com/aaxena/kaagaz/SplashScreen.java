@@ -15,6 +15,12 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //Initiating Flash Screen
+        fireSplashScreen();
+    }
+
+    private void fireSplashScreen() {
         int splash_screen_time_out = 2000;
         new Handler().postDelayed(new Runnable() {
             @Override

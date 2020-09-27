@@ -9,7 +9,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -20,7 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="4ad0ed2f7d14" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="PDAID18092710038" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -58,12 +58,13 @@
     <property name="BundleExportedModule" value="app" />
     <property name="ExportApk.ApkPath" value="C:\Users\raffl\Documents\GitHub\Kaagaz\app" />
     <property name="ExportApk.BuildVariants" value="release" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Covid19Tracker/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.aaxena.kaagaz" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\layout" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.aaxena.kaagaz" />
@@ -71,9 +72,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aaxena.kaagaz" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
-      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\layout" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.aaxena.kaagaz" />
     </key>
   </component>
   <component name="RunDashboard">

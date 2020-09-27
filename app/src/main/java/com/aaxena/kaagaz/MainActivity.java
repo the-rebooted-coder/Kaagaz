@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
             Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
             setWallpaperMojave();
             Calendar c = Calendar.getInstance();
-            c.set(Calendar.HOUR_OF_DAY, 12);
+            c.set(Calendar.HOUR_OF_DAY, 2);
             c.add(Calendar.SECOND, 5);
             manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
             finish();
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
             Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
             setWallpaperBeach();
             Calendar c = Calendar.getInstance();
-            c.set(Calendar.HOUR_OF_DAY, 12);
+            c.set(Calendar.HOUR_OF_DAY, 2);
             c.add(Calendar.SECOND, 5);
             manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
             finish();
@@ -56,27 +56,29 @@ public class MainActivity extends Activity {
             AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             setWallpaperCosmos();
             Calendar c = Calendar.getInstance();
-            c.set(Calendar.HOUR_OF_DAY, 12);
+            c.set(Calendar.HOUR_OF_DAY, 2);
             c.add(Calendar.SECOND, 5);
             manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
             Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
             finish();
         }
-        else {
+        else if (identifier.contains("island")){
             AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
             setWallpaperIsland();
             Calendar c = Calendar.getInstance();
-            c.set(Calendar.HOUR_OF_DAY, 11);
+            c.set(Calendar.HOUR_OF_DAY, 2);
             c.add(Calendar.SECOND, 5);
             manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
             finish();
         }
     }
+
     private void loadPerfs() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         identifier = sharedPreferences.getString(TEXT,"island");
     }
+
     private void setWallpaperBeach() {
 
         Calendar c = Calendar.getInstance();
@@ -423,6 +425,7 @@ public class MainActivity extends Activity {
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
+
             } catch (IOException e) {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }

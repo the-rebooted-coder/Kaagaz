@@ -134,8 +134,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable\full_moon.png" />
-                                      <entry key="outputName" value="ic_full_moon" />
+                                      <entry key="imageAsset" value="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\mipmap-xhdpi\ic_launcher_foreground.png" />
+                                      <entry key="outputName" value="ic_half_moon" />
                                     </map>
                                   </option>
                                 </PersistentState>

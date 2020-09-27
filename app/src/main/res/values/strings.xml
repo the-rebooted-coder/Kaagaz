@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Kaagaz</string>
     <string name="set">set</string>
-    <string name="todo">TODO</string>
     <string name="in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations">In order to get the functionality of Dynamic Wallpapers which changes throughout the day, Kaagaz Requires to Keep a Service Running.\n\nDue to Limitations of Android System you\'ll need to Allow Kaagaz through Battery Saver\n\nOtherwise the Wallpapers won\'t change with time and will be static. The Battery Consumption is negligible.</string>
     <string name="hello_welcome_to_kaagaz">Hello, Welcome to Kaagaz</string>
     <string name="ignore_battery_optimisations">Allow Kaagaz</string>
@@ -22,7 +21,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="apply">Apply</string>
-    <string name="choose_a_view">Choose a View</string>
+    <string name="choose_a_view">Choose a Wallpaper</string>
     <string name="moon_background">moon_background</string>
     <string name="suggestion">Full Moon stretches more than two screens, ensure atleast two home screen pages for best results!</string>
     <string name="mojave_desert_image">Mojave Desert Image</string>
@@ -31,4 +30,5 @@
     <string name="stop_wallpaper_service">Stop Wallpaper Service</string>
     <string name="suggestion2">High Quality Wallpaper, Takes some time to be applied for the first time!</string>
     <string name="half_moon">Half Moon Nearby 🌓</string>
+    <string name="todo">TODO</string>
 </resources>

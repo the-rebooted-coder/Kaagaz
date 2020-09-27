@@ -11,9 +11,9 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
     @Override    public Fragment getItem(int position) {
         switch (position){
             case 0: return new Tab1();
-            case 1: return new Tab2();
-            case 2: return new Tab3();
-            case 3: return new Tab4();
+            case 1: return new Tab3();
+            case 2: return new Tab4();
+            case 3: return new Tab2();
         }
         return null;
     }
@@ -23,9 +23,9 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
     }
     @Override    public CharSequence getPageTitle(int position) {        switch (position){
         case 0: return "Desert";
-        case 1: return "Waves";
-        case 2: return "Celestial";
-        case 3: return "Island";
+        case 1: return "Celestial";
+        case 2: return "Island";
+        case 3: return "Waves";
         default: return null;
     }
     }

@@ -121,7 +121,7 @@ public class Landing extends AppCompatActivity {
             extra.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(Landing.this, "Find Battery Exclusions", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Landing.this, "Open iManager and Grant Battery Exclusion", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                     Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v8.vibrate(25);

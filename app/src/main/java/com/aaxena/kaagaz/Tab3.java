@@ -5,16 +5,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
-
 import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -80,7 +78,7 @@ public class Tab3 extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(24);
+        vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(TEXT,"moon");

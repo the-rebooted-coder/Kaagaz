@@ -99,7 +99,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(24);
+        vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(TEXT,"mojave");

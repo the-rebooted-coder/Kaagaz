@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.Vibrator;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Checker extends AppCompatActivity {
@@ -14,10 +13,14 @@ public class Checker extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //BatteryOptimisationChecker
+        batteryOptimisationChecker();
 
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(23);
 
+    }
+    private void batteryOptimisationChecker() {
         String packageName = getPackageName();
         PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
         if (!pm.isIgnoringBatteryOptimizations(packageName)){

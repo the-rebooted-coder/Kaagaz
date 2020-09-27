@@ -1,9 +1,9 @@
 package com.aaxena.kaagaz;
 
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -16,6 +16,7 @@ public class ReminderBroadcast  extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "Reminder")
                 .setSmallIcon(R.drawable.ic_half_moon)
+                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.large_notif))
                 .setContentTitle(context.getString(R.string.half_moon))
                 .setContentText("Half Moon is just around the corner")
                 .setAutoCancel(true)

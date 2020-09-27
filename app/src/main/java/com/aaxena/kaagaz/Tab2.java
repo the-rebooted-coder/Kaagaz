@@ -9,8 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -67,6 +70,8 @@ public class Tab2 extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_tab2, container, false);
+        ImageView imageView = view.findViewById(R.id.nothing2);
+        Glide.with(this).load(R.drawable.four_two).centerCrop().into(imageView);
         Button upButton = view.findViewById(R.id.sea);
         upButton.setOnClickListener(this);
         return view;
@@ -75,7 +80,7 @@ public class Tab2 extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(24);
+        vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(TEXT,"water");

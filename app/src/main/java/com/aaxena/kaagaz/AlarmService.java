@@ -25,6 +25,29 @@ public class AlarmService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         loadPerfs();
+        fireNotif();
+        setWall();
+        return START_STICKY;
+    }
+
+    private void setWall() {
+        if (hello.contains("mojave")) {
+            //Setting Wallpaper for Mojave Desert
+            setWallpaperMojave();
+        } else if (hello.contains("water")) {
+            //Setting Wallpaper for Beach Side
+            setWallpaperBeach();
+        } else if (hello.contains("moon")){
+            //Setting Wallpaper for Moonlit Cosmos
+            setWallpaperCosmos();
+        }
+        else if (hello.contains("island")){
+            //Setting Wallpaper for BigSur
+            setWallpaperIsland();
+        }
+    }
+
+    private void fireNotif() {
         MoonFx moonFx = new MoonFx();
         moonFx.setDate(new Date());
         Calendar c = Calendar.getInstance();
@@ -36,23 +59,7 @@ public class AlarmService extends Service {
             long tenSecondsInMillis = 1 + 10;
             alarmManager.set(AlarmManager.RTC_WAKEUP, tenSecondsInMillis, pendingIntent);
         }
-        if (hello.contains("mojave")) {
-            //Setting Wallpaper for Mojave Desert
-            setWallpaperMojave();
-        } else if (hello.contains("water")) {
-            //Setting Wallpaper for Beach Side
-            setWallpaperBeach();
-        } else if (hello.contains("moon")){
-            //Setting Wallpaper for Moonlit Cosmos
-            setWallpaperCosmos();
-        }
-        else {
-            //Setting Wallpaper for BigSur
-            setWallpaperIsland();
-        }
-        return START_STICKY;
     }
-
 
     private void loadPerfs() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
