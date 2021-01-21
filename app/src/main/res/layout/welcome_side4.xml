@@ -6,19 +6,17 @@
     android:background="@color/ultimate_blues">
 
     <LinearLayout
-        android:layout_width="369dp"
-        android:layout_height="535dp"
+        android:layout_width="355dp"
+        android:layout_height="450dp"
         android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/first"
-            android:layout_width="289dp"
-            android:layout_height="249dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="307dp"
+            android:layout_height="283dp"
             app:lottie_autoPlay="true"
             app:lottie_fileName="moon.json"
             app:lottie_loop="true" />
@@ -26,7 +24,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:fontFamily="@font/productsansbold"
             android:text="@string/slide_4_title"
             android:textAlignment="center"
@@ -34,16 +31,29 @@
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="185dp"
-            android:fontFamily="@font/productsans"
-            android:paddingLeft="@dimen/desc_padding"
-            android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_4_desc"
-            android:textAlignment="center"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="@dimen/slide_desc" />
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/productsans"
+                    android:paddingLeft="@dimen/desc_padding"
+                    android:paddingRight="@dimen/desc_padding"
+                    android:text="@string/slide_4_desc"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/slide_desc" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 </RelativeLayout>
