@@ -43,7 +43,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="124dp"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/productsans"
                     android:paddingLeft="@dimen/desc_padding"
                     android:paddingRight="@dimen/desc_padding"
