@@ -40,4 +40,6 @@
     <string name="slide_2_desc">Get the Breeze of a Sea or the Scotch of a Desert, your wallpaper keeps changing by the time of the day!</string>
     <string name="slide_3_title">No Battery Straining</string>
     <string name="slide_3_desc">All of this comes with almost negligible affect to your battery juice</string>
+    <string name="slide_4_title">Just Before We Begin...</string>
+    <string name="slide_4_desc">To allow smooth functioning of Kaagaz, the app needs to run in the background, got it?\n\nGreat!\nLet\'s tell the system!</string>
 </resources>

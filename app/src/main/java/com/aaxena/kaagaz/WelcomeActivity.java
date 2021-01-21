@@ -50,6 +50,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 R.layout.welcome_side1,
                 R.layout.welcome_side2,
                 R.layout.welcome_side3,
+                R.layout.welcome_side4,
         };
 
         // making notification bar transparent
