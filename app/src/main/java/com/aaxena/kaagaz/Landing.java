@@ -31,14 +31,61 @@ public class Landing extends AppCompatActivity {
                 Intent intent = new Intent();
                 String manufacturer = android.os.Build.MANUFACTURER;
                 if ("xiaomi".equalsIgnoreCase(manufacturer)) {
+                    Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v8.vibrate(26);
+                    Toast.makeText(this,"Turn on Kaagaz",Toast.LENGTH_SHORT).show();
                     intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
                     startActivity(intent);
-                } else if ("oppo".equalsIgnoreCase(manufacturer)) {
-                    intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
-                    startActivity(intent);
+                }
+                else if ("Letv".equalsIgnoreCase(manufacturer)) {
+                intent.setComponent(new ComponentName("com.letv.android.letvsafe",
+                        "com.letv.android.letvsafe.AutobootManageActivity"));
+                startActivity(intent);
+                }
+                else if ("oppo".equalsIgnoreCase(manufacturer)) {
+                    Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v8.vibrate(26);
+                    try {
+                        intent.setClassName("com.coloros.safecenter",
+                                "com.coloros.safecenter.permission.startup.StartupAppListActivity");
+                        startActivity(intent);
+                    } catch (Exception e) {
+                        try {
+                            intent.setClassName("com.oppo.safe",
+                                    "com.oppo.safe.permission.startup.StartupAppListActivity");
+                            startActivity(intent);
+                        } catch (Exception ex) {
+                            try {
+                                intent.setClassName("com.coloros.safecenter",
+                                        "com.coloros.safecenter.startupapp.StartupAppListActivity");
+                                startActivity(intent);
+                            } catch (Exception exx) {
+                                exx.printStackTrace();
+                            }
+                        }
+                    }
                 } else if ("vivo".equalsIgnoreCase(manufacturer)) {
-                    intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
-                    startActivity(intent);
+                    Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v8.vibrate(26);
+                    try {
+                        intent.setComponent(new ComponentName("com.iqoo.secure",
+                                "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity"));
+                        startActivity(intent);
+                    } catch (Exception e) {
+                        try {
+                            intent.setComponent(new ComponentName("com.vivo.permissionmanager",
+                                    "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
+                            startActivity(intent);
+                        } catch (Exception ex) {
+                            try {
+                                intent.setClassName("com.iqoo.secure",
+                                        "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager");
+                                startActivity(intent);
+                            } catch (Exception exx) {
+                                ex.printStackTrace();
+                            }
+                        }
+                    }
                 } else {
                     Toast.makeText(Landing.this,"Restart Kaagaz Now",Toast.LENGTH_SHORT).show();
                 }
@@ -61,11 +108,14 @@ public class Landing extends AppCompatActivity {
                 Toast.makeText(Landing.this, R.string.sucsful,Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(Landing.this,DeployedChooser.class);
                 startActivity(i);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             }
         });
     }
     private void determineManufacture() {
+        Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v8.vibrate(26);
         Button extra = findViewById(R.id.extra_ins);
         TextView ro_device = findViewById(R.id.mobile_make);
         String ro_build = android.os.Build.MANUFACTURER;
@@ -75,8 +125,8 @@ public class Landing extends AppCompatActivity {
             extra.setOnClickListener(v -> {
                 Toast.makeText(Landing.this, "Go to Battery Saver then tap 'No Restrictions'", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                v8.vibrate(25);
+                Vibrator v9 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v9.vibrate(25);
                 Uri uri = Uri.fromParts("package", getPackageName(), null);
                 intent.setData(uri);
                 startActivity(intent);
@@ -87,8 +137,8 @@ public class Landing extends AppCompatActivity {
             extra.setOnClickListener(v -> {
                 Toast.makeText(Landing.this, "Find Battery Exclusions and turn them off", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                v8.vibrate(25);
+                Vibrator v10 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v10.vibrate(25);
                 Uri uri = Uri.fromParts("package", getPackageName(), null);
                 intent.setData(uri);
                 startActivity(intent);
@@ -99,8 +149,8 @@ public class Landing extends AppCompatActivity {
             extra.setOnClickListener(v -> {
                 Toast.makeText(Landing.this, "Open iManager and Grant Battery Exclusion", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                v8.vibrate(25);
+                Vibrator v11 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v11.vibrate(25);
                 Uri uri = Uri.fromParts("package", getPackageName(), null);
                 intent.setData(uri);
                 startActivity(intent);

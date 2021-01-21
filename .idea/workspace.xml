@@ -42,11 +42,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Landing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Landing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/WelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/WelcomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/roundedbutton5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/roundedbutton5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/roundedbutton6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/roundedbutton6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/SplashScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_landing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_landing.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,25 +222,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="534" y="234" key="AndroidCreateXmlResourceDialog/0.0.1440.900@0.0.1440.900" timestamp="1611232631840" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611251922790">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611254065306">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611251922790" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611254065306" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.781@0.23.1440.781" timestamp="1611232905117" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611251922788">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611254065305">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611251922788" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611254065305" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.781@0.23.1440.781" timestamp="1611232905114" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611251922786">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611254065304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611251922786" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611254065304" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.781@0.23.1440.781" timestamp="1611232905113" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611251922789">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611254065305">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611251922789" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611254065305" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.781@0.23.1440.781" timestamp="1611232905117" />
     <state x="308" y="200" key="IDE.errors.dialog" timestamp="1611251571451">
       <screen x="0" y="0" width="1440" height="900" />
