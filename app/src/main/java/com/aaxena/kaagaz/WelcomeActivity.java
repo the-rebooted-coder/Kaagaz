@@ -99,22 +99,16 @@ public class WelcomeActivity extends AppCompatActivity {
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
-                //intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
-                //startActivity(intent);
             } else if ("oppo".equalsIgnoreCase(manufacturer)) {
                 Intent i = new Intent(WelcomeActivity.this,Landing.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
-                //intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
-               // startActivity(intent);
             } else if ("vivo".equalsIgnoreCase(manufacturer)) {
                 Intent i = new Intent(WelcomeActivity.this,Landing.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
-                //intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
-                //startActivity(intent);
             } else {
                 Toast.makeText(this,"Ignore Battery Optimisations and Restart Kaagaz",Toast.LENGTH_LONG).show();
                 Intent i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);

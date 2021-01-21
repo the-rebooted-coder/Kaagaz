@@ -26,27 +26,24 @@ public class Landing extends AppCompatActivity {
         determineManufacture();
 
         Button starter = findViewById(R.id.starter);
-        starter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent();
-                    String manufacturer = android.os.Build.MANUFACTURER;
-                    if ("xiaomi".equalsIgnoreCase(manufacturer)) {
-                        intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
-                        startActivity(intent);
-                    } else if ("oppo".equalsIgnoreCase(manufacturer)) {
-                        intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
-                        startActivity(intent);
-                    } else if ("vivo".equalsIgnoreCase(manufacturer)) {
-                        intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(Landing.this,"Restart Kaagaz Now",Toast.LENGTH_SHORT).show();
-                    }
-                } catch (Exception e) {
-                    Toast.makeText(Landing.this, R.string.err_msg, Toast.LENGTH_LONG).show();
+        starter.setOnClickListener(v -> {
+            try {
+                Intent intent = new Intent();
+                String manufacturer = android.os.Build.MANUFACTURER;
+                if ("xiaomi".equalsIgnoreCase(manufacturer)) {
+                    intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
+                    startActivity(intent);
+                } else if ("oppo".equalsIgnoreCase(manufacturer)) {
+                    intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
+                    startActivity(intent);
+                } else if ("vivo".equalsIgnoreCase(manufacturer)) {
+                    intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(Landing.this,"Restart Kaagaz Now",Toast.LENGTH_SHORT).show();
                 }
+            } catch (Exception e) {
+                Toast.makeText(Landing.this, R.string.err_msg, Toast.LENGTH_LONG).show();
             }
         });
 

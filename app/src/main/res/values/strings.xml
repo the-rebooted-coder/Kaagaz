@@ -3,15 +3,15 @@
     <string name="set">set</string>
     <string name="in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations">In order to get the functionality of Dynamic Wallpapers which changes throughout the day, Kaagaz Requires to Keep a Service Running.\n\nDue to Limitations of Android System you\'ll need to Allow Kaagaz through Battery Saver\n\nOtherwise the Wallpapers won\'t change with time and will be static. The Battery Consumption is negligible.</string>
     <string name="hello_welcome_to_kaagaz">Hello, Welcome to Kaagaz</string>
-    <string name="ignore_battery_optimisations">Allow Kaagaz</string>
+    <string name="ignore_battery_optimisations">Step 1</string>
     <string name="battery"><![CDATA[Navigate To Battery>Battery optimisation>Tap NOT OPTIMISED>All apps>Kaagaz>Don\'t Optimise or ANY OTHER BATTERY EXCLUSIONS AVAILABLE]]></string>
     <string name="after_doing_the_above_step_restart_the_app_and_voila_your_dynamic_desktop_will_be_delievered_to_you_in_moments">After Doing The Above Step, Restart the App and Voila! Your Dynamic Desktop will be then delivered to you in a while!</string>
     <string name="err_msg">Error Initializing Startup Service, Turn off Battery Optimisations to Start</string>
-    <string name="xiaomi">Based on Your Xiaomi Device, You\'ll need to disable Battery Saver to \'NO Restrictions\'</string>
-    <string name="oppo">Based on Your Oppo Device, You\'ll need to disable Battery Related Exclusions. If not available restart the app!</string>
-    <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. Open iManager and exclude Kaagaz from Battery Section</string>
-    <string name="turn_off_battery_restrictions">Set \'No Restrictions\' under Battery Saver</string>
-    <string name="check">Start Kaagaz</string>
+    <string name="xiaomi">Based on Your Xiaomi Device, You\'ll need to disable Battery Saver to \'NO Restrictions.\' Follow the steps!</string>
+    <string name="oppo">Based on Your Oppo Device, You\'ll need to disable Battery Related Exclusions. Follow the steps!If not available restart the app!</string>
+    <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. Follow the steps! Open iManager and exclude Kaagaz from Battery Section</string>
+    <string name="turn_off_battery_restrictions">Step 2</string>
+    <string name="check">GO!</string>
 
     <string name="err_not_opt">Not Yet, Try Completing Steps Again!</string>
     <string name="choose_your_desktop_view">Choose Your Desktop View</string>

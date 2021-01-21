@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yello_ish"
+    android:background="@color/more_blues"
     android:theme="@style/Theme.AppCompat.DayNight"
     tools:context=".Landing">
 
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/first"
-        android:layout_width="307dp"
-        android:layout_height="283dp"
+        android:layout_width="227dp"
+        android:layout_height="223dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,12 +20,12 @@
         app:layout_constraintVertical_bias="0.319"
         app:lottie_autoPlay="true"
         app:lottie_fileName="settings.json"
-        app:lottie_loop="true" />
+        app:lottie_loop="false" />
 
     <Button
         android:id="@+id/starter"
-        android:layout_width="147dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/roundedbutton4"
         android:elevation="20dp"
         android:fontFamily="@font/productsansbold"
@@ -52,29 +52,26 @@
         android:text="@string/turn_off_battery_restrictions"
         android:textColor="@android:color/primary_text_dark"
         android:textSize="16sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/checker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/starter" />
+        app:layout_constraintTop_toBottomOf="@+id/starter"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/checker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/roundedbutton5"
         android:fontFamily="@font/productsans"
         android:text="@string/check"
         android:textSize="16sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extra_ins" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/mobile_make"
@@ -82,6 +79,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/productsansbold"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/first"
         app:layout_constraintEnd_toEndOf="parent"
