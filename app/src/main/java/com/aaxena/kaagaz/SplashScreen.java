@@ -2,6 +2,7 @@ package com.aaxena.kaagaz;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
@@ -24,20 +25,11 @@ public class SplashScreen extends AppCompatActivity {
     private void fireSplashScreen() {
         int splash_screen_time_out = 2000;
         new Handler().postDelayed(() -> {
-            String packageName = getPackageName();
-            PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-            if (!pm.isIgnoringBatteryOptimizations(packageName)){
-                Intent i = new Intent(SplashScreen.this, Landing.class);
-                startActivity(i);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                finish();
-            }
-            else {
+                SharedPreferences sharedPrefs = getSharedPreferences("com.aaxena.gailofficersassociation", MODE_PRIVATE);
                 Intent i = new Intent(SplashScreen.this, WelcomeActivity.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
-            }
         }, splash_screen_time_out);
     }
 }

@@ -105,6 +105,7 @@ public class Landing extends AppCompatActivity {
             else {
                 Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 v8.vibrate(26);
+                //TODO ADD A CHECK USING SHARED PREF
                 Toast.makeText(Landing.this, R.string.sucsful,Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(Landing.this,DeployedChooser.class);
                 startActivity(i);
