@@ -52,6 +52,7 @@ public class WelcomeActivity extends AppCompatActivity {
         layouts = new int[]{
                 R.layout.welcome_side1,
                 R.layout.welcome_side2,
+                R.layout.welcome_side3,
         };
 
         // making notification bar transparent
@@ -80,18 +81,10 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_DENIED) {
-            Log.d("permission", "permission denied to WRITE_EXTERNAL_STORAGE - requesting it");
-            String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
-            requestPermissions(permissions, 1);
-        }
-        else{
             prefManager.setFirstTimeLaunch(false);
             startActivity(new Intent(WelcomeActivity.this, DeployedChooser.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             finish();
-        }
     }
 
     // viewpager change listener
