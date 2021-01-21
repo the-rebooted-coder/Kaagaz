@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Kaagaz.iml" filepath="$PROJECT_DIR$/Kaagaz.iml" group="Kaagaz" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Kaagaz/app" />
+      <module fileurl="file://$PROJECT_DIR$/Kaagaz.iml" filepath="$PROJECT_DIR$/Kaagaz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kaagaz.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kaagaz.app.iml" />
     </modules>
   </component>
 </project>
