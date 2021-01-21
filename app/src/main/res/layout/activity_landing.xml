@@ -4,48 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="@color/yello_ish"
     android:theme="@style/Theme.AppCompat.DayNight"
     tools:context=".Landing">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/productsansbold"
-        android:text="@string/hello_welcome_to_kaagaz"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04000002" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/productsans"
-        android:text="@string/in_order_to_get_functionality_of_dynamic_wallpaper_which_changes_throught_the_day_kaagaz_requires_to_keep_a_background_service_running_ndue_to_limitations_of_android_system_you_ll_need_to_disable_battery_optimisations"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/first"
+        android:layout_width="307dp"
+        android:layout_height="283dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
+        app:layout_constraintVertical_bias="0.319"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="settings.json"
+        app:lottie_loop="true" />
 
     <Button
         android:id="@+id/starter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
         android:background="@drawable/roundedbutton4"
-        android:fontFamily="@font/productsans"
+        android:elevation="20dp"
+        android:fontFamily="@font/productsansbold"
         android:text="@string/ignore_battery_optimisations"
         android:textColor="@android:color/background_light"
         android:textSize="16sp"
@@ -56,20 +39,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.72" />
 
-    <TextView
-        android:id="@+id/device_ro_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/productsans"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/starter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.39" />
-
     <Button
         android:id="@+id/extra_ins"
         android:layout_width="wrap_content"
@@ -77,12 +46,14 @@
         android:layout_marginStart="159dp"
         android:layout_marginTop="39dp"
         android:layout_marginEnd="164dp"
+        android:layout_marginBottom="34dp"
         android:background="@drawable/roundedbutton6"
         android:fontFamily="@font/productsans"
         android:text="@string/turn_off_battery_restrictions"
         android:textColor="@android:color/primary_text_dark"
         android:textSize="16sp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/checker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/starter" />
@@ -104,5 +75,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extra_ins" />
+
+    <TextView
+        android:id="@+id/mobile_make"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsansbold"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

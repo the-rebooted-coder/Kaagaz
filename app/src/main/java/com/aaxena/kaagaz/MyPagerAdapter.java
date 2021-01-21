@@ -23,7 +23,7 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
     }
     @Override    public CharSequence getPageTitle(int position) {        switch (position){
         case 0: return "Desert";
-        case 1: return "Celestial";
+        case 1: return "Phase";
         case 2: return "Island";
         case 3: return "Waves";
         default: return null;

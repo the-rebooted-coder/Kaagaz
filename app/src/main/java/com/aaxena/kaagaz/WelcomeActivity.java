@@ -1,9 +1,13 @@
 package com.aaxena.kaagaz;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
@@ -80,13 +85,45 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
             prefManager.setFirstTimeLaunch(false);
-           //startActivity(new Intent(WelcomeActivity.this, DeployedChooser.class));
+            //startActivity(new Intent(WelcomeActivity.this, DeployedChooser.class));
             //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             //finish();
-            openPowerSettings();
-    }
-    private void openPowerSettings() {
-        startActivityForResult(new Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS), 0);
+        Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v8.vibrate(25);
+        try {
+            Toast.makeText(this,"Turn 'on' permission for Kaagaz",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent();
+            String manufacturer = android.os.Build.MANUFACTURER;
+            if ("xiaomi".equalsIgnoreCase(manufacturer)) {
+                Intent i = new Intent(WelcomeActivity.this,Landing.class);
+                startActivity(i);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
+                //intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
+                //startActivity(intent);
+            } else if ("oppo".equalsIgnoreCase(manufacturer)) {
+                Intent i = new Intent(WelcomeActivity.this,Landing.class);
+                startActivity(i);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
+                //intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
+               // startActivity(intent);
+            } else if ("vivo".equalsIgnoreCase(manufacturer)) {
+                Intent i = new Intent(WelcomeActivity.this,Landing.class);
+                startActivity(i);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
+                //intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
+                //startActivity(intent);
+            } else {
+                Toast.makeText(this,"Ignore Battery Optimisations and Restart Kaagaz",Toast.LENGTH_LONG).show();
+                Intent i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                i.setData(Uri.parse("package:" + getPackageName()));
+                startActivity(i);
+            }
+        } catch (Exception e) {
+            Toast.makeText(WelcomeActivity.this, R.string.err_msg, Toast.LENGTH_LONG).show();
+        }
     }
 
     // viewpager change listener

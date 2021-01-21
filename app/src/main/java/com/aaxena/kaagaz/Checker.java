@@ -15,7 +15,6 @@ public class Checker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //BatteryOptimisationChecker
         batteryOptimisationChecker();
-
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(23);
 
