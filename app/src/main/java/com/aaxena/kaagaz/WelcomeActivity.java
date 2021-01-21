@@ -80,9 +80,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
             prefManager.setFirstTimeLaunch(false);
-            startActivity(new Intent(WelcomeActivity.this, DeployedChooser.class));
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            finish();
+           //startActivity(new Intent(WelcomeActivity.this, DeployedChooser.class));
+            //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            //finish();
+            openPowerSettings();
+    }
+    private void openPowerSettings() {
+        startActivityForResult(new Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS), 0);
     }
 
     // viewpager change listener
