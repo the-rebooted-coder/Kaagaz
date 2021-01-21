@@ -52,15 +52,6 @@ public class WelcomeActivity extends AppCompatActivity {
         layouts = new int[]{
                 R.layout.welcome_side1,
                 R.layout.welcome_side2,
-                R.layout.welcome_side3,
-                R.layout.welcome_side4,
-                R.layout.welcome_side5,
-                R.layout.welcome_side6,
-                R.layout.welcome_side7,
-                R.layout.welcome_side9,
-                R.layout.welcome_side10,
-                R.layout.welcome_all_set,
-                R.layout.welcome_side8,
         };
 
         // making notification bar transparent
@@ -97,7 +88,7 @@ public class WelcomeActivity extends AppCompatActivity {
         }
         else{
             prefManager.setFirstTimeLaunch(false);
-            startActivity(new Intent(WelcomeActivity.this, Landing.class));
+            startActivity(new Intent(WelcomeActivity.this, DeployedChooser.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             finish();
         }
