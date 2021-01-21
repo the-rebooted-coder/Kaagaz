@@ -31,4 +31,7 @@
     <string name="suggestion2">High Quality Wallpaper, Takes some time to be applied for the first time!</string>
     <string name="half_moon">Half Moon Nearby 🌓</string>
     <string name="todo">TODO</string>
+    <string name="start">START</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
 </resources>

@@ -32,8 +32,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/PrefManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/WelcomeActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Kaagaz.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Kaagaz.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +66,7 @@
         <option value="layoutResourceFile" />
         <option value="resourceFile" />
         <option value="Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -91,9 +99,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
-      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\layout" />
+    <key name="android.template.1409672986">
+      <recent name="com.aaxena.kaagaz" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.aaxena.kaagaz" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.aaxena.kaagaz" />
@@ -101,8 +111,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aaxena.kaagaz" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.aaxena.kaagaz" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunManager">
@@ -195,5 +206,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="308" y="212" key="AndroidCreateResourceFileDialog" timestamp="1611228661040">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1611228661040" />
+    <state x="534" y="234" key="AndroidCreateXmlResourceDialog" timestamp="1611228519942">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="534" y="234" key="AndroidCreateXmlResourceDialog/0.0.1440.900@0.0.1440.900" timestamp="1611228519942" />
   </component>
 </project>

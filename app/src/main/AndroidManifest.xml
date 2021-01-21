@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".SplashScreen"/>
+        <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".SplashScreen" />
         <activity android:name=".DeployedChooser" />
         <activity android:name=".Landing" />
 
