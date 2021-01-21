@@ -32,9 +32,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_side4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/welcome_side4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_side4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +216,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="534" y="234" key="AndroidCreateXmlResourceDialog/0.0.1440.900@0.0.1440.900" timestamp="1611232631840" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611232905117">
+      <screen x="0" y="23" width="1440" height="781" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611232868694" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.781@0.23.1440.781" timestamp="1611232905117" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611232905114">
+      <screen x="0" y="23" width="1440" height="781" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611232868692" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.781@0.23.1440.781" timestamp="1611232905114" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611232905113">
+      <screen x="0" y="23" width="1440" height="781" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611232868691" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.781@0.23.1440.781" timestamp="1611232905113" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611232905117">
+      <screen x="0" y="23" width="1440" height="781" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611232868693" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.781@0.23.1440.781" timestamp="1611232905117" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1611230552147">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
