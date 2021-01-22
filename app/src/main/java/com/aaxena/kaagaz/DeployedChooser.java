@@ -140,6 +140,10 @@ public class DeployedChooser extends AppCompatActivity {
         else if("Letv".equalsIgnoreCase(ro_build)){
             shootNotif();
         }
+        else if("Realme".equalsIgnoreCase(ro_build))
+        {
+         shootNotif();
+        }
     }
 
     private void shootNotif() {
