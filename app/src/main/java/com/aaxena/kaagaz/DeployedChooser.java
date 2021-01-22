@@ -98,12 +98,11 @@ public class DeployedChooser extends AppCompatActivity {
     }
 
     private void shootNotif() {
-        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big_notif_to_lock);
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_mast_head);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "Wallpaper Service")
                 .setSmallIcon(R.drawable.ic_half_moon)
-                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.big_notif_to_lock))
+                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.notification_mast_head))
                 .setContentTitle("Lock Kaagaz to memory")
-                .setContentText("Tap to see how")
                 .setAutoCancel(true)
                 .setColor(RED)
                 .setColorized(true)

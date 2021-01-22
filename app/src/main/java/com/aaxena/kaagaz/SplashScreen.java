@@ -32,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
     private void fireNotification() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "Kaagaz Wallpaper Service")
                 .setSmallIcon(R.drawable.ic_half_moon)
-                .setContentTitle("Kaagaz running")
+                .setContentTitle("Kaagaz Wallpaper Service Running")
                 .setOngoing(true)
                 .setColor(BLUE)
                 .setColorized(true)
