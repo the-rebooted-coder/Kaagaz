@@ -143,8 +143,9 @@ public class DeployedChooser extends AppCompatActivity {
     }
 
     private void shootNotif() {
+        createMemoryChannel();
         Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_mast_head);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "Wallpaper Service")
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "memory")
                 .setSmallIcon(R.drawable.ic_half_moon)
                 .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.notification_mast_head))
                 .setContentTitle("Lock Kaagaz to memory")
@@ -154,15 +155,18 @@ public class DeployedChooser extends AppCompatActivity {
                 .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap).bigLargeIcon(null))
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setPriority(NotificationCompat.PRIORITY_HIGH);
-        Intent appActivityIntent = new Intent(this, SplashScreen.class);
-        PendingIntent contentAppActivityIntent =
-                PendingIntent.getActivity(
-                        this,
-                        0,
-                        appActivityIntent,
-                        PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(contentAppActivityIntent);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(180, builder.build());
+    }
+    private void createMemoryChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Memory Info";
+            String description = "Channel to give information about how to prevent app from getting killed";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("memory", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }
