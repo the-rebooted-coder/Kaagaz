@@ -37,7 +37,7 @@ public class SplashScreen extends AppCompatActivity {
         createOngoingChannel();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "ongoing")
                 .setSmallIcon(R.drawable.ic_half_moon)
-                .setContentTitle("Kaagaz Wallpaper Service Running")
+                .setContentTitle("Wallpaper Service Running")
                 .setOngoing(true)
                 .setColor(GRAY)
                 .setColorized(true)
