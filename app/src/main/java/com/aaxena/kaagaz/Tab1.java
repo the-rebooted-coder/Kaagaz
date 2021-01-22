@@ -1,8 +1,13 @@
 package com.aaxena.kaagaz;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -13,9 +18,14 @@ import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import static android.content.Context.MODE_PRIVATE;
+import static android.graphics.Color.RED;
 
 
 /**
@@ -26,8 +36,8 @@ import static android.content.Context.MODE_PRIVATE;
 public class Tab1 extends Fragment implements View.OnClickListener {
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
-    protected AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
-    protected AlphaAnimation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ;
+    protected AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
+    protected AlphaAnimation fadeOut = new AlphaAnimation(1.0f, 0.0f);
     ImageView fader;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,14 +78,15 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
     View view2;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view2 = inflater.inflate(R.layout.fragment_tab1, container, false);
         Button upButton = view2.findViewById(R.id.mojave);
         upButton.setOnClickListener(this);
-
         fader = view2.findViewById(R.id.nothing);
         fader.startAnimation(fadeIn);
         fader.startAnimation(fadeOut);
@@ -83,7 +94,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         fadeIn.setFillAfter(true);
         fadeOut.setDuration(600);
         fadeOut.setFillAfter(true);
-        fadeOut.setStartOffset(3200+fadeIn.getStartOffset());
+        fadeOut.setStartOffset(3200 + fadeIn.getStartOffset());
         int splash_screen_time_out = 4000;
         new Handler().postDelayed(() -> {
             fader.startAnimation(fadeIn);
@@ -94,14 +105,66 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        //FireNotif
+        makeNotif();
+        LottieAnimationView loading;
+        Button upButton = view2.findViewById(R.id.mojave);
+        upButton.setVisibility(View.INVISIBLE);
+        loading = view2.findViewById(R.id.setting_delay);
+        loading.setVisibility(View.VISIBLE);
+        loading.playAnimation();
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(28);
-        SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(TEXT,"mojave");
+        editor.putString(TEXT, "mojave");
         editor.commit();
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
         getActivity().finish();
+    }
+
+    private void makeNotif() {
+        String ro_build = android.os.Build.MANUFACTURER;
+        if ("xiaomi".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("oppo".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("vivo".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("Letv".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("Realme".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        }
+    }
+
+    private void shootNotif() {
+        createMemoryChannel();
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_mast_head);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this.getContext(), "memory")
+                .setSmallIcon(R.drawable.ic_half_moon)
+                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.notification_mast_head))
+                .setContentTitle("Lock Kaagaz to memory")
+                .setAutoCancel(true)
+                .setColor(RED)
+                .setColorized(true)
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap).bigLargeIcon(null))
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                .setPriority(NotificationCompat.PRIORITY_HIGH);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.getContext());
+        notificationManager.notify(180, builder.build());
+    }
+
+    private void createMemoryChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Memory Info";
+            String description = "Channel to give information about how to prevent app from getting killed";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("memory", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = this.getContext().getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }

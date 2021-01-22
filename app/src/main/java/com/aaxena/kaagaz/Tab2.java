@@ -1,8 +1,13 @@
 package com.aaxena.kaagaz;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
@@ -11,11 +16,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 
 import static android.content.Context.MODE_PRIVATE;
+import static android.graphics.Color.RED;
 
 
 /**
@@ -79,6 +87,8 @@ public class Tab2 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        //FireNotif
+        makeNotif();
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
@@ -89,4 +99,47 @@ public class Tab2 extends Fragment implements View.OnClickListener {
         startActivity(intent);
         getActivity().finish();
         }
+    private void makeNotif() {
+        String ro_build = android.os.Build.MANUFACTURER;
+        if ("xiaomi".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("oppo".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("vivo".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("Letv".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        } else if ("Realme".equalsIgnoreCase(ro_build)) {
+            shootNotif();
+        }
+    }
+
+    private void shootNotif() {
+        createMemoryChannel();
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_mast_head);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this.getContext(), "memory")
+                .setSmallIcon(R.drawable.ic_half_moon)
+                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.notification_mast_head))
+                .setContentTitle("Lock Kaagaz to memory")
+                .setAutoCancel(true)
+                .setColor(RED)
+                .setColorized(true)
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap).bigLargeIcon(null))
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                .setPriority(NotificationCompat.PRIORITY_HIGH);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.getContext());
+        notificationManager.notify(180, builder.build());
+    }
+
+    private void createMemoryChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Memory Info";
+            String description = "Channel to give information about how to prevent app from getting killed";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("memory", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = this.getContext().getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
     }
