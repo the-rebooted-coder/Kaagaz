@@ -65,7 +65,7 @@ public class DeployedChooser extends AppCompatActivity {
 
                 try {
                     mAppUpdateManager.startUpdateFlowForResult(
-                            appUpdateInfo, AppUpdateType.IMMEDIATE, Landing.this, RC_APP_UPDATE);
+                            appUpdateInfo, AppUpdateType.IMMEDIATE, DeployedChooser.this, RC_APP_UPDATE);
 
                 } catch (IntentSender.SendIntentException e) {
                     e.printStackTrace();
