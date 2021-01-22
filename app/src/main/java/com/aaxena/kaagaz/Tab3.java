@@ -21,6 +21,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import static android.content.Context.MODE_PRIVATE;
 import static android.graphics.Color.RED;
 
@@ -87,6 +89,12 @@ public class Tab3 extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         //FireNotif
         makeNotif();
+        LottieAnimationView loading;
+        Button upButton = view3.findViewById(R.id.moon);
+        upButton.setVisibility(View.INVISIBLE);
+        loading = view3.findViewById(R.id.setting_delay_three);
+        loading.setVisibility(View.VISIBLE);
+        loading.playAnimation();
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);

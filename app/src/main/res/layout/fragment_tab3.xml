@@ -20,6 +20,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/setting_delay_three"
+        android:layout_width="75dp"
+        android:layout_height="62dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="setting_wall.json"
+        app:lottie_loop="false" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"

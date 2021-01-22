@@ -20,6 +20,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -89,6 +90,12 @@ public class Tab2 extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         //FireNotif
         makeNotif();
+        LottieAnimationView loading;
+        Button upButton = view.findViewById(R.id.sea);
+        upButton.setVisibility(View.INVISIBLE);
+        loading = view.findViewById(R.id.setting_delay_two);
+        loading.setVisibility(View.VISIBLE);
+        loading.playAnimation();
         Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(28);
         SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
