@@ -84,14 +84,10 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         fadeOut.setDuration(600);
         fadeOut.setFillAfter(true);
         fadeOut.setStartOffset(3200+fadeIn.getStartOffset());
-
         int splash_screen_time_out = 4000;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                fader.startAnimation(fadeIn);
-                fader.setBackgroundResource(R.drawable.sixteen);
-            }
+        new Handler().postDelayed(() -> {
+            fader.startAnimation(fadeIn);
+            fader.setBackgroundResource(R.drawable.sixteen);
         }, splash_screen_time_out);
         return view2;
     }
