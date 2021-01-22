@@ -32,11 +32,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/notification_mast_head.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/DeployedChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/DeployedChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/SplashScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/big_notif_to_lock.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +213,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1611336416061" />
+    <state x="100" y="100" width="1240" height="700" key="AVDManager" timestamp="1611336996892">
+      <screen x="0" y="23" width="1440" height="781" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="AVDManager/0.23.1440.781@0.23.1440.781" timestamp="1611336996892" />
     <state x="308" y="212" key="AndroidCreateResourceFileDialog" timestamp="1611229487990">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

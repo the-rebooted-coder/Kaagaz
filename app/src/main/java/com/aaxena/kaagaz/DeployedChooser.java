@@ -1,22 +1,15 @@
 package com.aaxena.kaagaz;
 
-import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Vibrator;
-import android.provider.Settings;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,15 +18,19 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URI;
-import java.net.URL;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.InstallState;
+import com.google.android.play.core.install.InstallStateUpdatedListener;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.InstallStatus;
+import com.google.android.play.core.install.model.UpdateAvailability;
 
 import static android.graphics.Color.RED;
 
 public class DeployedChooser extends AppCompatActivity {
+    private AppUpdateManager mAppUpdateManager;
+    private static final int RC_APP_UPDATE = 11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +49,54 @@ public class DeployedChooser extends AppCompatActivity {
 
         //FireNotif
         makeNotif();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAppUpdateManager = AppUpdateManagerFactory.create(this);
+
+        mAppUpdateManager.registerListener(installStateUpdatedListener);
+
+        mAppUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
+
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                    && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE )){
+
+                try {
+                    mAppUpdateManager.startUpdateFlowForResult(
+                            appUpdateInfo, AppUpdateType.IMMEDIATE, Landing.this, RC_APP_UPDATE);
+
+                } catch (IntentSender.SendIntentException e) {
+                    e.printStackTrace();
+                }
+
+            }
+            else {
+            }
+        });
+    }
+    InstallStateUpdatedListener installStateUpdatedListener = new
+            InstallStateUpdatedListener() {
+                @Override
+                public void onStateUpdate(InstallState state) {
+                    if (state.installStatus() == InstallStatus.INSTALLED){
+                        if (mAppUpdateManager != null){
+                            mAppUpdateManager.unregisterListener(installStateUpdatedListener);
+                        }
+
+                    } else {
+                        //App Is Fully Updated Nothing To Do, Continuing Normal WorkFlow but do not erase the else func
+                    }
+                }
+            };
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mAppUpdateManager != null) {
+            mAppUpdateManager.unregisterListener(installStateUpdatedListener);
+        }
     }
 
     private void initializeViewPager() {
