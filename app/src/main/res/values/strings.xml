@@ -7,9 +7,10 @@
     <string name="battery"><![CDATA[Navigate To Battery>Battery optimisation>Tap NOT OPTIMISED>All apps>Kaagaz>Don\'t Optimise or ANY OTHER BATTERY EXCLUSIONS AVAILABLE]]></string>
     <string name="after_doing_the_above_step_restart_the_app_and_voila_your_dynamic_desktop_will_be_delievered_to_you_in_moments">After Doing The Above Step, Restart the App and Voila! Your Dynamic Desktop will be then delivered to you in a while!</string>
     <string name="err_msg">Error Initializing Startup Service, Turn off Battery Optimisations to Start</string>
-    <string name="xiaomi">Based on Your Xiaomi Device, You\'ll need to disable Battery Saver to \'NO Restrictions.\' Follow the steps!</string>
+    <string name="xiaomi">Based on Your Xiaomi Device, You\'ll need to disable Battery Saver to \'No Restrictions.\' Follow the steps!</string>
     <string name="oppo">Based on Your Oppo Device, You\'ll need to disable Battery Related Exclusions. Follow the steps!If not available restart the app!</string>
     <string name="vivo">Based on Your Vivo Device, You\'ll need to disable Battery Related Exclusions. Follow the steps! Open iManager and exclude Kaagaz from Battery Section</string>
+    <string name="letv">Based on Your Letv Device, You\'ll need to disable Battery Related Exclusions. Follow the steps! to exclude Kaagaz from Battery Section</string>
     <string name="turn_off_battery_restrictions">Step 2</string>
     <string name="check">GO!</string>
 

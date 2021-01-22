@@ -25,7 +25,6 @@
         </activity>
         <activity android:name=".DeployedChooser" />
         <activity android:name=".Landing" />
-
         <receiver android:name=".BootCompletedIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

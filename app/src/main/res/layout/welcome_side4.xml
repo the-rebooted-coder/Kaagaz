@@ -15,8 +15,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/first"
-            android:layout_width="307dp"
-            android:layout_height="283dp"
+            android:layout_width="285dp"
+            android:layout_height="246dp"
             app:lottie_autoPlay="true"
             app:lottie_fileName="moon.json"
             app:lottie_loop="true" />

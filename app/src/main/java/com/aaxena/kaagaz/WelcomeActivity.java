@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.view.LayoutInflater;
@@ -91,20 +92,21 @@ public class WelcomeActivity extends AppCompatActivity {
         Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v8.vibrate(25);
         try {
+            String packageName = getPackageName();
+            PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
             Toast.makeText(this,"Turn 'on' permission for Kaagaz",Toast.LENGTH_LONG).show();
-            Intent intent = new Intent();
             String manufacturer = android.os.Build.MANUFACTURER;
-            if ("xiaomi".equalsIgnoreCase(manufacturer)) {
+            if ("xiaomi".equalsIgnoreCase(manufacturer)&& !pm.isIgnoringBatteryOptimizations(packageName)) {
                 Intent i = new Intent(WelcomeActivity.this,Landing.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
-            } else if ("oppo".equalsIgnoreCase(manufacturer)) {
+            } else if ("oppo".equalsIgnoreCase(manufacturer)&& !pm.isIgnoringBatteryOptimizations(packageName)) {
                 Intent i = new Intent(WelcomeActivity.this,Landing.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
-            } else if ("vivo".equalsIgnoreCase(manufacturer)) {
+            } else if ("vivo".equalsIgnoreCase(manufacturer)&& !pm.isIgnoringBatteryOptimizations(packageName)) {
                 Intent i = new Intent(WelcomeActivity.this,Landing.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

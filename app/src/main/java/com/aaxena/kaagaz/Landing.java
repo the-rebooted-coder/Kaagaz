@@ -3,6 +3,7 @@ package com.aaxena.kaagaz;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PowerManager;
@@ -17,12 +18,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Landing extends AppCompatActivity {
+    public static final String BATTERY_PREF = "sharedPrefs";
+    public static final String STAT = "text";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_landing);
         //Determining Manufacturer
+
         determineManufacture();
 
         Button starter = findViewById(R.id.starter);
@@ -105,7 +110,10 @@ public class Landing extends AppCompatActivity {
             else {
                 Vibrator v8 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 v8.vibrate(26);
-                //TODO ADD A CHECK USING SHARED PREF
+                SharedPreferences preferences = getSharedPreferences(BATTERY_PREF,MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(STAT,"true");
+                editor.commit();
                 Toast.makeText(Landing.this, R.string.sucsful,Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(Landing.this,DeployedChooser.class);
                 startActivity(i);
@@ -149,6 +157,19 @@ public class Landing extends AppCompatActivity {
             extra.setVisibility(View.VISIBLE);
             extra.setOnClickListener(v -> {
                 Toast.makeText(Landing.this, "Open iManager and Grant Battery Exclusion", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                Vibrator v11 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v11.vibrate(25);
+                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivity(intent);
+            });
+        }
+        else if("Letv".equalsIgnoreCase(ro_build)){
+            ro_device.setText(R.string.letv);
+            extra.setVisibility(View.VISIBLE);
+            extra.setOnClickListener(v -> {
+                Toast.makeText(Landing.this, "Find Battery Saver, if not available proceed to next step", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                 Vibrator v11 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 v11.vibrate(25);
