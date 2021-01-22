@@ -23,7 +23,7 @@ public class SplashScreen extends AppCompatActivity {
     private void fireSplashScreen() {
         String packageName = getPackageName();
         PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-        int splash_screen_time_out = 2000;
+        int splash_screen_time_out = 1900;
         new Handler().postDelayed(() -> {
             if (pm.isIgnoringBatteryOptimizations(packageName)) {
                 Intent i = new Intent(SplashScreen.this, DeployedChooser.class);

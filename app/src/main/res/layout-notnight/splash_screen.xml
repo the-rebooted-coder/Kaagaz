@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3490dc">
+    android:background="@color/white">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
@@ -17,7 +17,7 @@
         app:layout_constraintVertical_bias="0.8"
         app:lottie_autoPlay="true"
         app:lottie_fileName="kaagaz_loader.json"
-        app:lottie_loop="true" />
+        app:lottie_loop="false" />
 
     <TextView
         android:id="@+id/textView5"
@@ -26,7 +26,7 @@
         android:fontFamily="@font/productsansbold"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
         android:textSize="29sp"
         app:layout_constraintBottom_toTopOf="@+id/animation_view"
         app:layout_constraintEnd_toEndOf="parent"
