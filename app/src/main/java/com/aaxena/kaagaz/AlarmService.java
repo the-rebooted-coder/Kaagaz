@@ -1,6 +1,8 @@
 package com.aaxena.kaagaz;
 
 import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.app.WallpaperManager;
@@ -13,11 +15,16 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.widget.Toast;
 
+import androidx.core.app.NotificationCompat;
+
 import com.jesgs.moonfx.MoonFx;
 
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
+
+import static android.graphics.Color.GRAY;
+import static com.aaxena.kaagaz.App.CHANNEL_ID;
 
 public class AlarmService extends Service {
     public static final String SHARED_PREFS = "sharedPrefs";
@@ -29,6 +36,16 @@ public class AlarmService extends Service {
         loadPerfs();
         fireNotif();
         setWall();
+        Intent notificationsIntent = new Intent(this,SplashScreen.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationsIntent,0);
+        Notification notification =  new NotificationCompat.Builder(this,CHANNEL_ID)
+                .setContentTitle("Wallpaper Service Running")
+                .setSmallIcon(R.drawable.ic_half_moon)
+                .setColor(GRAY)
+                .setColorized(true)
+                .setContentIntent(pendingIntent)
+                .build();
+        startForeground(1,notification);
         return START_STICKY;
     }
 
