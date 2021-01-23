@@ -134,7 +134,7 @@ public class Tab3 extends Fragment implements View.OnClickListener{
         } else if ("Letv".equalsIgnoreCase(ro_build)) {
             shootNotif();
         } else if ("Realme".equalsIgnoreCase(ro_build)) {
-            shootNotif();
+            shootNotifRealme();
         }
     }
 
@@ -150,10 +150,27 @@ public class Tab3 extends Fragment implements View.OnClickListener{
                 .setColorized(true)
                 .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap).bigLargeIcon(null))
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                .setPriority(NotificationCompat.PRIORITY_HIGH);
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.getContext());
         notificationManager.notify(180, builder.build());
     }
+    private void shootNotifRealme() {
+        createMemoryChannel();
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_mast_head);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this.getContext(), "memory")
+                .setSmallIcon(R.drawable.ic_half_moon)
+                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.notification_mast_head_realme))
+                .setContentTitle("Lock Kaagaz to memory")
+                .setAutoCancel(true)
+                .setColor(RED)
+                .setColorized(true)
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap).bigLargeIcon(null))
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.getContext());
+        notificationManager.notify(180, builder.build());
+    }
+
 
     private void createMemoryChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
