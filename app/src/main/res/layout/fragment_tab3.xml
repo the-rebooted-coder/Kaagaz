@@ -7,8 +7,8 @@
 
     <Button
         android:id="@+id/moon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
         android:background="@drawable/roundedbutton3"
         android:fontFamily="@font/productsans"
         android:text="@string/apply"

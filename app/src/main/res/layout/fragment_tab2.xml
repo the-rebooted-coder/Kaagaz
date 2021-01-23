@@ -32,8 +32,8 @@
 
     <Button
         android:id="@+id/sea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
         android:background="@drawable/roundedbutton2"
         android:fontFamily="@font/productsans"
         android:text="@string/apply"
