@@ -17,12 +17,15 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.pedromassango.doubleclick.DoubleClick;
+import com.pedromassango.doubleclick.DoubleClickListener;
 
 import static android.content.Context.MODE_PRIVATE;
 import static android.graphics.Color.RED;
@@ -86,7 +89,33 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         view2 = inflater.inflate(R.layout.fragment_tab1, container, false);
         Button upButton = view2.findViewById(R.id.mojave);
-        upButton.setOnClickListener(this);
+        upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
+            @Override
+            public void onSingleClick(View view) {
+                Toast.makeText(getContext(),"Tap twice to apply",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDoubleClick(View view) {
+                //FireNotif
+                makeNotif();
+                LottieAnimationView loading;
+                Button upButton = view2.findViewById(R.id.mojave);
+                upButton.setVisibility(View.INVISIBLE);
+                loading = view2.findViewById(R.id.setting_delay);
+                loading.setVisibility(View.VISIBLE);
+                loading.playAnimation();
+                Vibrator v8 = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                v8.vibrate(26);
+                SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(TEXT, "mojave");
+                editor.commit();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        }));
         fader = view2.findViewById(R.id.nothing);
         fader.startAnimation(fadeIn);
         fader.startAnimation(fadeOut);
@@ -105,23 +134,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        //FireNotif
-        makeNotif();
-        LottieAnimationView loading;
-        Button upButton = view2.findViewById(R.id.mojave);
-        upButton.setVisibility(View.INVISIBLE);
-        loading = view2.findViewById(R.id.setting_delay);
-        loading.setVisibility(View.VISIBLE);
-        loading.playAnimation();
-        Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(28);
-        SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(TEXT, "mojave");
-        editor.commit();
-        Intent intent = new Intent(getActivity(), MainActivity.class);
-        startActivity(intent);
-        getActivity().finish();
+
     }
 
     private void makeNotif() {

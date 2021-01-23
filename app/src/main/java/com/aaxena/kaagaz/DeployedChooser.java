@@ -89,7 +89,7 @@ public class DeployedChooser extends AppCompatActivity {
     }
 
     private void initializeViewPager() {
-        Toast.makeText(this, "Swipe to Shift!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Swipe to Shift!\nDouble Tap Anywhere to Apply!", Toast.LENGTH_LONG).show();
         ViewPager viewPager = findViewById(R.id.pager);
         MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(myPagerAdapter);
