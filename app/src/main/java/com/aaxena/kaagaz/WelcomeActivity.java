@@ -1,9 +1,7 @@
 package com.aaxena.kaagaz;
 
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,13 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
-import static android.graphics.Color.BLUE;
-import static android.graphics.Color.RED;
 
 public class WelcomeActivity extends AppCompatActivity {
     private ViewPager viewPager;
