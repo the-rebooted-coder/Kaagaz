@@ -42,6 +42,7 @@ public class AlarmService extends Service {
                 .setContentTitle("Wallpaper Service Running")
                 .setSmallIcon(R.drawable.ic_half_moon)
                 .setColor(GRAY)
+                .setNotificationSilent()
                 .setColorized(true)
                 .setContentIntent(pendingIntent)
                 .build();
