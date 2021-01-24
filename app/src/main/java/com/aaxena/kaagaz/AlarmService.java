@@ -2,6 +2,7 @@ package com.aaxena.kaagaz;
 
 import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.app.WallpaperManager;
@@ -64,6 +65,14 @@ public class AlarmService extends Service {
                 .build();
         startForeground(1,notification);
         return START_STICKY;
+    }
+
+    @Override
+    public boolean stopService(Intent name) {
+        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancel(1);
+        stopSelf();
+        return super.stopService(name);
     }
 
     private void setWall() {

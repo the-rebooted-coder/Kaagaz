@@ -50,6 +50,7 @@
         android:layout_marginBottom="63dp"
         android:fontFamily="@font/productsansbold"
         android:text="@string/final_confirmation"
+        android:textAlignment="center"
         android:textColor="@color/blues"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/nope"
@@ -59,7 +60,7 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <Button
-        android:id="@+id/nope"
+        android:id="@+id/yes"
         android:layout_width="84dp"
         android:layout_height="35dp"
         android:layout_marginStart="159dp"
@@ -74,7 +75,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/yes"
+        android:id="@+id/nope"
         android:layout_width="84dp"
         android:layout_height="35dp"
         android:layout_marginStart="159dp"
