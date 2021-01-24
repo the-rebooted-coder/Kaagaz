@@ -43,4 +43,5 @@
     <string name="slide_3_desc">All of this comes with almost negligible affect to your battery juice</string>
     <string name="slide_4_title">Just Before We Leap...</string>
     <string name="slide_4_desc">To allow smooth functioning of Kaagaz, the app needs to run in the background.\nGot it?\nGreat!\nLet\'s tell the system!</string>
+    <string name="snooze">Stop</string>
 </resources>

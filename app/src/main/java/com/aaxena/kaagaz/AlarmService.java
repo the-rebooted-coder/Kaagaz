@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
+import static android.app.Notification.EXTRA_NOTIFICATION_ID;
 import static android.graphics.Color.GRAY;
 import static com.aaxena.kaagaz.App.CHANNEL_ID;
 
@@ -30,11 +32,24 @@ public class AlarmService extends Service {
     public static final String TEXT = "text";
     private String hello;
 
+
+    public class AppConstant
+    {
+        public static final String STOP_ACTION = "STOP_ACTION";
+    }
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         loadPerfs();
         fireNotif();
         setWall();
+        Intent snoozeIntent = new Intent(this, NotificationReceiver.class);
+        snoozeIntent.setAction(AppConstant.STOP_ACTION);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            snoozeIntent.putExtra(EXTRA_NOTIFICATION_ID, 0);
+        }
+        PendingIntent snoozePendingIntent =
+                PendingIntent.getBroadcast(this, 0, snoozeIntent, 0);
         Intent notificationsIntent = new Intent(this,SplashScreen.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationsIntent,0);
         Notification notification =  new NotificationCompat.Builder(this,CHANNEL_ID)
@@ -44,6 +59,8 @@ public class AlarmService extends Service {
                 .setNotificationSilent()
                 .setColorized(true)
                 .setContentIntent(pendingIntent)
+                .addAction(R.mipmap.ic_launcher, getString(R.string.snooze),
+                        snoozePendingIntent)
                 .build();
         startForeground(1,notification);
         return START_STICKY;
