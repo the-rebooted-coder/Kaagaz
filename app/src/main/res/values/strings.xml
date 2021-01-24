@@ -45,4 +45,8 @@
     <string name="slide_4_desc">To allow smooth functioning of Kaagaz, the app needs to run in the background.\nGot it?\nGreat!\nLet\'s tell the system!</string>
     <string name="snooze">Stop</string>
     <string name="developer_name">Spandan Saxena</string>
+    <string name="final_confirmation">Are You Sure You Want To Quit Kaagaz Service?</string>
+    <string name="yes">Yes</string>
+    <string name="nope">Nope</string>
+    <string name="image_of_app">Image of App</string>
 </resources>

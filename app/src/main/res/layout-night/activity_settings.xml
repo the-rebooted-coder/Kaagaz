@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blues"
     tools:context=".Settings">
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         android:layout_marginBottom="63dp"
         android:fontFamily="@font/productsansbold"
         android:text="@string/final_confirmation"
-        android:textColor="@color/blues"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/nope"
         app:layout_constraintEnd_toEndOf="parent"

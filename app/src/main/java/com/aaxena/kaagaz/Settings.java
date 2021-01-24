@@ -17,13 +17,10 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         Button devButton = findViewById(R.id.devButton);
-        devButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
-                vibe.vibrate(20);
-                Toast.makeText(getApplicationContext(),"App Developed by One Silicon Diode ;)",Toast.LENGTH_SHORT).show();
-            }
+        devButton.setOnClickListener(v -> {
+            Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+            vibe.vibrate(20);
+            Toast.makeText(getApplicationContext(),"App Developed by One Silicon Diode ;)",Toast.LENGTH_SHORT).show();
         });
     }
 }
