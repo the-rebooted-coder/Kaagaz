@@ -37,7 +37,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@android:style/Theme.Translucent" />
-        <receiver android:enabled="true" android:name=".BootCompletedIntentReceiver">
+        <receiver android:enabled="true" android:exported="false" android:name=".BootCompletedIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
