@@ -92,7 +92,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
-                Toast.makeText(getContext(),"Tap twice to apply",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Tap twice to apply Desert",Toast.LENGTH_SHORT).show();
             }
 
             @Override
