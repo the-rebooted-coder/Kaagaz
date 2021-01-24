@@ -85,24 +85,22 @@ public class Tab2 extends Fragment implements View.OnClickListener {
         ImageView imageView = view.findViewById(R.id.nothing2);
         Glide.with(this).load(R.drawable.four_two).centerCrop().into(imageView);
         Button upButton = view.findViewById(R.id.sea);
+        LottieAnimationView loading_two;
+        loading_two = view.findViewById(R.id.setting_delay_two);
         upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
-                Toast.makeText(getContext(),"Tap twice to apply Lunar Phase",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Tap twice to apply Waves",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onDoubleClick(View view) {
                 //FireNotif
                 makeNotif();
-                LottieAnimationView loading;
-                Button upButton = view.findViewById(R.id.sea);
-                upButton.setVisibility(View.INVISIBLE);
-                loading = view.findViewById(R.id.setting_delay_two);
-                loading.setVisibility(View.VISIBLE);
-                loading.playAnimation();
+                loading_two.setVisibility(View.VISIBLE);
+                loading_two.playAnimation();
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-                vibrator.vibrate(28);
+                vibrator.vibrate(25);
                 SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString(TEXT,"water");

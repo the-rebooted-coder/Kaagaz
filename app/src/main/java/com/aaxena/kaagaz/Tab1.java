@@ -89,6 +89,8 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         view2 = inflater.inflate(R.layout.fragment_tab1, container, false);
         Button upButton = view2.findViewById(R.id.mojave);
+        LottieAnimationView loading;
+        loading = view2.findViewById(R.id.setting_delay);
         upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
@@ -99,14 +101,10 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             public void onDoubleClick(View view) {
                 //FireNotif
                 makeNotif();
-                LottieAnimationView loading;
-                Button upButton = view2.findViewById(R.id.mojave);
-                upButton.setVisibility(View.INVISIBLE);
-                loading = view2.findViewById(R.id.setting_delay);
                 loading.setVisibility(View.VISIBLE);
                 loading.playAnimation();
                 Vibrator v8 = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-                v8.vibrate(26);
+                v8.vibrate(25);
                 SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString(TEXT, "mojave");
