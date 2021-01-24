@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -22,6 +23,8 @@ import androidx.fragment.app.Fragment;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
+import com.pedromassango.doubleclick.DoubleClick;
+import com.pedromassango.doubleclick.DoubleClickListener;
 
 import static android.content.Context.MODE_PRIVATE;
 import static android.graphics.Color.RED;
@@ -82,29 +85,38 @@ public class Tab4 extends Fragment implements View.OnClickListener{
         ImageView imageViewa = view4.findViewById(R.id.imageView);
         Glide.with(this).load(R.drawable.big1).centerCrop().into(imageViewa);
         Button upButton = view4.findViewById(R.id.island);
-        upButton.setOnClickListener(this);
+        LottieAnimationView loading_four;
+        loading_four = view4.findViewById(R.id.setting_delay_four);
+        upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
+            @Override
+            public void onSingleClick(View view) {
+                Toast.makeText(getContext(),"Tap twice to apply Island",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDoubleClick(View view) {
+                //FireNotif
+                makeNotif();
+                Button upButton = view4.findViewById(R.id.island);
+                upButton.setVisibility(View.INVISIBLE);
+                loading_four.setVisibility(View.VISIBLE);
+                loading_four.playAnimation();
+                Vibrator vibrator = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(28);
+                SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(TEXT,"island");
+                editor.commit();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        }));
         return view4;
     }
 
     @Override
     public void onClick(View v) {
-        //FireNotif
-        makeNotif();
-        LottieAnimationView loading;
-        Button upButton = view4.findViewById(R.id.island);
-        upButton.setVisibility(View.INVISIBLE);
-        loading = view4.findViewById(R.id.setting_delay_four);
-        loading.setVisibility(View.VISIBLE);
-        loading.playAnimation();
-        Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(28);
-        SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(TEXT,"island");
-        editor.commit();
-        Intent intent = new Intent(getActivity(), MainActivity.class);
-        startActivity(intent);
-        getActivity().finish();
     }
     private void makeNotif() {
         String ro_build = android.os.Build.MANUFACTURER;

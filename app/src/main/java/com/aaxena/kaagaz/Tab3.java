@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
@@ -22,6 +23,8 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.pedromassango.doubleclick.DoubleClick;
+import com.pedromassango.doubleclick.DoubleClickListener;
 
 import static android.content.Context.MODE_PRIVATE;
 import static android.graphics.Color.RED;
@@ -80,47 +83,53 @@ public class Tab3 extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         view3 = inflater.inflate(R.layout.fragment_tab3, container, false);
         Button upButton = view3.findViewById(R.id.moon);
-        upButton.setOnClickListener(this);
+        LottieAnimationView loading_three;
+        loading_three = view3.findViewById(R.id.setting_delay_three);
+        upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
+            @Override
+            public void onSingleClick(View view) {
+                Toast.makeText(getContext(),"Tap twice to apply Lunar Phase",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDoubleClick(View view) {
+                //FireNotif
+                makeNotif();
+                Button upButton = view3.findViewById(R.id.moon);
+                upButton.setVisibility(View.INVISIBLE);
+                loading_three.setVisibility(View.VISIBLE);
+                loading_three.playAnimation();
+                Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(28);
+                SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(TEXT,"moon");
+                editor.commit();
+                if (isFirstTime()) {
+                    // Dialog Box
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("About Lunar Phase")
+                            .setMessage(R.string.celestial_onetime)
+                            .setPositiveButton("Okay", (dialog, which) -> {
+                                Intent intent = new Intent(getActivity(), MainActivity.class);
+                                startActivity(intent);
+                                getActivity().finish();
+                            })
+                            .create().show();
+                }
+                else{
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
+                }
+            }
+        }));
 
         return view3;
     }
 
     @Override
     public void onClick(View v) {
-        //FireNotif
-        makeNotif();
-        LottieAnimationView loading;
-        Button upButton = view3.findViewById(R.id.moon);
-        upButton.setVisibility(View.INVISIBLE);
-        loading = view3.findViewById(R.id.setting_delay_three);
-        loading.setVisibility(View.VISIBLE);
-        loading.playAnimation();
-        Vibrator vibrator = (Vibrator) this.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(28);
-        SharedPreferences preferences = this.getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(TEXT,"moon");
-        editor.commit();
-        if (isFirstTime()) {
-            // Dialog Box
-            new AlertDialog.Builder(this.getActivity())
-                    .setTitle("Read Me")
-                    .setMessage(R.string.celestial_onetime)
-                    .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getActivity(), MainActivity.class);
-                            startActivity(intent);
-                            getActivity().finish();
-                        }
-                    })
-                    .create().show();
-        }
-        else{
-            Intent intent = new Intent(getActivity(), MainActivity.class);
-            startActivity(intent);
-            getActivity().finish();
-        }
     }
 
     private void makeNotif() {

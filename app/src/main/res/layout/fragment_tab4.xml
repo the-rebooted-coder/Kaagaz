@@ -31,11 +31,10 @@
 
     <Button
         android:id="@+id/island"
-        android:layout_width="88dp"
-        android:layout_height="38dp"
-        android:background="@drawable/roundedbutton7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         android:fontFamily="@font/productsans"
-        android:text="@string/apply"
         android:textColor="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
