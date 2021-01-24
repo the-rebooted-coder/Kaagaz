@@ -32,15 +32,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Tab3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Tab3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/BootCompletedIntentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/BootCompletedIntentReceiver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.43.40:5555]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -88,7 +88,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ApkExportedModule" value="app" />
-    <property name="BundleExportedModule" value="app" />
+    <property name="BundleExportedModule" value="Kaagaz.app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_XL_API_28" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-23T12:13:38.129Z" />
     <property name="ExportApk.ApkPath" value="C:\Users\raffl\Documents\GitHub\Kaagaz\app" />
@@ -266,9 +266,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="472" y="331" width="618" height="269" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1440.900@0.0.1440.900" timestamp="1611416340582" />
-    <state x="385" y="196" width="670" height="58" key="search.everywhere.popup" timestamp="1611420004663">
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup" timestamp="1611489527627">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="58" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1611420004663" />
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1611489527627" />
   </component>
 </project>

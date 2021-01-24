@@ -9,11 +9,6 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -33,23 +28,20 @@
         </activity>
         <activity android:name=".DeployedChooser" />
         <activity android:name=".Landing" />
+        <receiver android:name=".ReminderBroadcast" />
+        <activity android:name=".Checker"/>
+        <service
+            android:name=".AlarmService"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.Translucent" />
         <receiver android:enabled="true" android:name=".BootCompletedIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".ReminderBroadcast" />
-
-        <activity android:name=".Checker"/>
-
-        <service
-            android:name=".AlarmService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity"
-            android:theme="@android:style/Theme.Translucent" />
     </application>
 
 </manifest>
