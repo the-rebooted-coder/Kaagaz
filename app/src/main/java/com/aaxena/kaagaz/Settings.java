@@ -2,7 +2,9 @@ package com.aaxena.kaagaz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -15,6 +17,13 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         Button devButton = findViewById(R.id.devButton);
-        devButton.setOnClickListener(v -> Toast.makeText(getApplicationContext(),"App Developed by One Silicon Diode",Toast.LENGTH_LONG).show());
+        devButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+                vibe.vibrate(20);
+                Toast.makeText(getApplicationContext(),"App Developed by One Silicon Diode ;)",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
