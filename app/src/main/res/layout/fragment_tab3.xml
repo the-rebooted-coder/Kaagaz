@@ -7,11 +7,10 @@
 
     <Button
         android:id="@+id/moon"
-        android:layout_width="88dp"
-        android:layout_height="38dp"
-        android:background="@drawable/roundedbutton3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         android:fontFamily="@font/productsans"
-        android:text="@string/apply"
         android:textColor="@color/blues"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
