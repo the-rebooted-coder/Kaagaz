@@ -909,7 +909,7 @@ public class AlarmService extends Service {
     }
 
     @Override
-    //Action that keeeps service running even after removed from recents
+    //Action that keeps service running even after removed from recents
     public void onTaskRemoved(Intent rootIntent){
         Intent restartServiceTask = new Intent(getApplicationContext(),this.getClass());
         restartServiceTask.setPackage(getPackageName());
