@@ -90,6 +90,8 @@ public class Tab2 extends Fragment implements View.OnClickListener {
         upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
+                Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(20);
                 Toast.makeText(getContext(),"Tap twice to apply Waves",Toast.LENGTH_SHORT).show();
             }
 

@@ -44,16 +44,8 @@ public class AlarmService extends Service {
         loadPerfs();
         fireNotif();
         setWall();
-        //STOP Button on Notification Tap
-        Intent snoozeIntent = new Intent(this, NotificationReceiver.class);
-        snoozeIntent.setAction(AppConstant.STOP_ACTION);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            snoozeIntent.putExtra(EXTRA_NOTIFICATION_ID, 0);
-        }
-        PendingIntent snoozePendingIntent =
-                PendingIntent.getBroadcast(this, 0, snoozeIntent, 0);
         //Notification Tap
-        Intent notificationsIntent = new Intent(this,SplashScreen.class);
+        Intent notificationsIntent = new Intent(this,Settings.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationsIntent,0);
         String msg="Wallpaper Service Running";
         Notification notification =  new NotificationCompat.Builder(this,CHANNEL_ID)
@@ -63,8 +55,6 @@ public class AlarmService extends Service {
                 .setColorized(true)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
                 .setContentIntent(pendingIntent)
-                .addAction(R.mipmap.ic_launcher, getString(R.string.snooze),
-                        snoozePendingIntent)
                 .build();
         startForeground(1,notification);
         return START_NOT_STICKY;
