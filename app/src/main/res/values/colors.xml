@@ -2,8 +2,9 @@
 <resources>
     <color name="colorPrimary">#6070fc</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#0F13DC</color>
     <color name="white">#FFFFFF</color>
+    <color name="status_purple">#3A3E88</color>
     <color name="blues">#0D083C</color>
     <color name="more_blues">#1B1557</color>
     <color name="more__more_blues">#526EFF</color>

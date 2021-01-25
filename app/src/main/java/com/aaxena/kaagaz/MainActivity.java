@@ -61,10 +61,10 @@ public class MainActivity extends Activity {
             Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
             finish();
         }
-        else if (identifier.contains("island")){
+        else if (identifier.contains("kaagaz")){
             AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             Toast.makeText(this, R.string.intro_msg, Toast.LENGTH_LONG).show();
-            setWallpaperIsland();
+            setWallpaperKaagaz();
             Calendar c = Calendar.getInstance();
             c.set(Calendar.HOUR_OF_DAY, 2);
             c.add(Calendar.SECOND, 5);
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 
     private void loadPerfs() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        identifier = sharedPreferences.getString(TEXT,"island");
+        identifier = sharedPreferences.getString(TEXT,"kaagaz");
     }
 
     private void setWallpaperBeach() {
@@ -680,13 +680,13 @@ public class MainActivity extends Activity {
         }
     }
 
-    private void setWallpaperIsland() {
+    private void setWallpaperKaagaz() {
 
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
         if (timeOfDay >= 0 && timeOfDay < 01) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -694,7 +694,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 01 && timeOfDay < 02) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -702,7 +702,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 02 && timeOfDay < 03) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -710,7 +710,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 03 && timeOfDay < 04) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -718,7 +718,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 04 && timeOfDay < 05) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -726,7 +726,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 05 && timeOfDay < 06) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -734,7 +734,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 06 && timeOfDay < 07) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big3);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_one);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -742,7 +742,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 07 && timeOfDay < 8) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big3);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_one);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -750,7 +750,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 8 && timeOfDay < 9) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big4);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_two);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -758,7 +758,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 9 && timeOfDay < 10) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big5);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_eight);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -766,7 +766,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 10 && timeOfDay < 11) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big5);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_five);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -774,7 +774,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 11 && timeOfDay < 12) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big1);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_five);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -782,7 +782,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 12 && timeOfDay < 13) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big1);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_six);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -790,7 +790,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 13 && timeOfDay < 14) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big1);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_six);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -798,7 +798,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 14 && timeOfDay < 15) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big1);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_seven);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -806,7 +806,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 15 && timeOfDay < 16) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big5);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_seven);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -814,7 +814,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 16 && timeOfDay < 17) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big6);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_nine);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -822,7 +822,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 17 && timeOfDay < 18) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big7);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_nine);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -830,7 +830,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 18 && timeOfDay < 19) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big8);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_three);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -838,7 +838,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 19 && timeOfDay < 20) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_four);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -846,7 +846,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 20 && timeOfDay < 21) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_four);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -854,7 +854,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 21 && timeOfDay < 22) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_eleven);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -862,7 +862,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 22 && timeOfDay < 23) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_twelve);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);
@@ -870,7 +870,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
             }
         } else if (timeOfDay >= 23 && timeOfDay < 24) {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.big2);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.abs_eleven);
             WallpaperManager manager = WallpaperManager.getInstance(getApplicationContext());
             try {
                 manager.setBitmap(bitmap);

@@ -83,7 +83,7 @@ public class Tab4 extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         view4 = inflater.inflate(R.layout.fragment_tab4, container, false);
         ImageView imageViewa = view4.findViewById(R.id.imageView);
-        Glide.with(this).load(R.drawable.big1).centerCrop().into(imageViewa);
+        Glide.with(this).load(R.drawable.abs_eleven).centerCrop().into(imageViewa);
         Button upButton = view4.findViewById(R.id.island);
         LottieAnimationView loading_four;
         loading_four = view4.findViewById(R.id.setting_delay_four);
@@ -92,7 +92,7 @@ public class Tab4 extends Fragment implements View.OnClickListener{
             public void onSingleClick(View view) {
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(20);
-                Toast.makeText(getContext(),"Tap twice to apply Island",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Tap twice to apply Kaagaz",Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -107,7 +107,7 @@ public class Tab4 extends Fragment implements View.OnClickListener{
                 vibrator.vibrate(28);
                 SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putString(TEXT,"island");
+                editor.putString(TEXT,"kaagaz");
                 editor.commit();
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
