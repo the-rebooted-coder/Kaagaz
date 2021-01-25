@@ -32,17 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/AlarmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/AlarmService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,25 +237,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="534" y="234" key="AndroidCreateXmlResourceDialog/0.0.1440.900@0.0.1440.900" timestamp="1611517019477" />
-    <state width="1398" height="415" key="GridCell.Tab.0.bottom" timestamp="1611513383102">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611558474521">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="415" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611513383102" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611558474521" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.781@0.23.1440.781" timestamp="1611232905117" />
-    <state width="1398" height="415" key="GridCell.Tab.0.center" timestamp="1611513383100">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611558474519">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="415" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611513383100" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611558474519" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.781@0.23.1440.781" timestamp="1611232905114" />
-    <state width="1398" height="415" key="GridCell.Tab.0.left" timestamp="1611513383099">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611558474518">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="415" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611513383099" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611558474518" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.781@0.23.1440.781" timestamp="1611232905113" />
-    <state width="1398" height="415" key="GridCell.Tab.0.right" timestamp="1611513383102">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611558474520">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="415" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611513383101" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611558474520" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.781@0.23.1440.781" timestamp="1611232905117" />
     <state x="308" y="200" key="IDE.errors.dialog" timestamp="1611251571451">
       <screen x="0" y="0" width="1440" height="900" />

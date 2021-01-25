@@ -55,12 +55,13 @@ public class AlarmService extends Service {
         //Notification Tap
         Intent notificationsIntent = new Intent(this,SplashScreen.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationsIntent,0);
+        String msg="Wallpaper Service Running";
         Notification notification =  new NotificationCompat.Builder(this,CHANNEL_ID)
-                .setContentTitle("Wallpaper Service Running")
                 .setSmallIcon(R.drawable.ic_half_moon)
                 .setColor(GRAY)
                 .setNotificationSilent()
                 .setColorized(true)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
                 .setContentIntent(pendingIntent)
                 .addAction(R.mipmap.ic_launcher, getString(R.string.snooze),
                         snoozePendingIntent)
