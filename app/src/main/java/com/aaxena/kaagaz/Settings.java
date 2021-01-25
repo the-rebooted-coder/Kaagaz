@@ -44,10 +44,15 @@ public class Settings extends AppCompatActivity {
         yes.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
-                Toast.makeText(getApplicationContext(),"Tap Twice to Stop Service",Toast.LENGTH_SHORT).show();
+                Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+                vibe.vibrate(15);
+                Toast.makeText(getApplicationContext(),"Tap Twice to Stop",Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onDoubleClick(View view) {
+                Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+                vibe.vibrate(20);
+                Toast.makeText(getApplicationContext(),"Wallpaper Service Stopped",Toast.LENGTH_SHORT).show();
                 SharedPreferences preferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString(TEXT, "null");
