@@ -22,13 +22,12 @@ public class MainActivity extends Activity {
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
     private String identifier;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         loadPerfs();
-
-
         Intent launchIntent = new Intent(this, AlarmService.class);
         PendingIntent alarmIntent = PendingIntent.getService(this, 0, launchIntent, 0);
 
@@ -70,6 +69,11 @@ public class MainActivity extends Activity {
             c.set(Calendar.HOUR_OF_DAY, 2);
             c.add(Calendar.SECOND, 5);
             manager.setRepeating(AlarmManager.RTC, c.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, alarmIntent);
+            finish();
+        }
+        else if (identifier.contains("null")){
+            AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            manager.cancel(alarmIntent);
             finish();
         }
     }

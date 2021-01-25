@@ -44,6 +44,7 @@ public class AlarmService extends Service {
         loadPerfs();
         fireNotif();
         setWall();
+        //STOP Button on Notification Tap
         Intent snoozeIntent = new Intent(this, NotificationReceiver.class);
         snoozeIntent.setAction(AppConstant.STOP_ACTION);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -51,6 +52,7 @@ public class AlarmService extends Service {
         }
         PendingIntent snoozePendingIntent =
                 PendingIntent.getBroadcast(this, 0, snoozeIntent, 0);
+        //Notification Tap
         Intent notificationsIntent = new Intent(this,SplashScreen.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationsIntent,0);
         Notification notification =  new NotificationCompat.Builder(this,CHANNEL_ID)
@@ -64,15 +66,20 @@ public class AlarmService extends Service {
                         snoozePendingIntent)
                 .build();
         startForeground(1,notification);
-        return START_STICKY;
+        return START_NOT_STICKY;
     }
 
     @Override
     public boolean stopService(Intent name) {
-        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.cancel(1);
+        stopForeground(true);
         stopSelf();
         return super.stopService(name);
+    }
+
+    @Override
+    public void onDestroy() {
+        Toast.makeText(this,"Service will Stop on Next Run!",Toast.LENGTH_SHORT).show();
+        super.onDestroy();
     }
 
     private void setWall() {
@@ -89,6 +96,10 @@ public class AlarmService extends Service {
         else if (hello.contains("island")){
             //Setting Wallpaper for BigSur
             setWallpaperIsland();
+        }
+        else if (hello.contains("null")){
+            stopSelf();
+            stopForeground(true);
         }
     }
 
@@ -108,7 +119,7 @@ public class AlarmService extends Service {
 
     private void loadPerfs() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        hello = sharedPreferences.getString(TEXT, "mojave");
+        hello = sharedPreferences.getString(TEXT, "island");
     }
 
     private void setWallpaperBeach() {

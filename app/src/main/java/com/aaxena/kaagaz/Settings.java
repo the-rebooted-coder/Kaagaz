@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -14,6 +15,9 @@ import com.pedromassango.doubleclick.DoubleClick;
 import com.pedromassango.doubleclick.DoubleClickListener;
 
 import java.util.Set;
+
+import static com.aaxena.kaagaz.AlarmService.SHARED_PREFS;
+import static com.aaxena.kaagaz.AlarmService.TEXT;
 
 public class Settings extends AppCompatActivity {
 
@@ -44,6 +48,10 @@ public class Settings extends AppCompatActivity {
             }
             @Override
             public void onDoubleClick(View view) {
+                SharedPreferences preferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(TEXT, "null");
+                editor.commit();
                 stopService(new Intent(Settings.this, AlarmService.class));
                 finish();
             }
