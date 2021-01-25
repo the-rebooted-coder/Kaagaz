@@ -44,7 +44,7 @@ public class Settings extends AppCompatActivity {
         yes.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
-                Toast.makeText(getApplicationContext(),"Tap Again to Stop Service",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Tap Twice to Stop Service",Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onDoubleClick(View view) {

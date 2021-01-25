@@ -78,7 +78,6 @@ public class AlarmService extends Service {
 
     @Override
     public void onDestroy() {
-        Toast.makeText(this,"Service will Stop on Next Run!",Toast.LENGTH_SHORT).show();
         super.onDestroy();
     }
 
@@ -102,7 +101,6 @@ public class AlarmService extends Service {
             stopForeground(true);
         }
     }
-
     private void fireNotif() {
         MoonFx moonFx = new MoonFx();
         moonFx.setDate(new Date());
