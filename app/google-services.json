@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "795493935932",
+    "project_id": "kaagaz-6615d",
+    "storage_bucket": "kaagaz-6615d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795493935932:android:c3e1b0c2f5c26b9d020c39",
+        "android_client_info": {
+          "package_name": "com.aaxena.kaagaz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795493935932-2tb3rr2s75vl05u8l1mvk3bh0b50kpla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwX891653eB0NjTq4obl-srHhekzeh2Lw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795493935932-2tb3rr2s75vl05u8l1mvk3bh0b50kpla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
