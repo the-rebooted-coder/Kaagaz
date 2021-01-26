@@ -3,6 +3,7 @@ package com.aaxena.kaagaz;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -88,12 +89,19 @@ public class Tab4 extends Fragment implements View.OnClickListener{
         loading_four = view4.findViewById(R.id.setting_delay_four);
         if (isFirstTime()) {
             // Dialog Box
-            new AlertDialog.Builder(getActivity())
-                    .setTitle("Kaagaz")
-                    .setMessage("The Kaagaz wallpapers are simple geometrical and abstract figures that look astonishing on your home screen.\n\nCreated by Kaagaz for Kaagaz!")
-                    .setPositiveButton("Okay", (dialog, which) -> {
-                    })
-                    .create().show();
+            AlertDialog.Builder ImageDialog = new AlertDialog.Builder(getContext())
+                    .setCancelable(false);
+            ImageView showImage = new ImageView(getContext());
+            showImage.setImageResource(R.drawable.wall_e);
+            ImageDialog.setView(showImage);
+
+            ImageDialog.setNegativeButton("Fantastic!", new DialogInterface.OnClickListener()
+            {
+                public void onClick(DialogInterface arg0, int arg1)
+                {
+                }
+            });
+            ImageDialog.show();
         }
         upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
