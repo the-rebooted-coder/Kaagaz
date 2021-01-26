@@ -93,7 +93,6 @@ public class WelcomeActivity extends AppCompatActivity {
         try {
             String packageName = getPackageName();
             PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-            Toast.makeText(this,"Turn 'on' permission for Kaagaz",Toast.LENGTH_LONG).show();
             String manufacturer = android.os.Build.MANUFACTURER;
             if ("xiaomi".equalsIgnoreCase(manufacturer)&& !pm.isIgnoringBatteryOptimizations(packageName)) {
                 Intent i = new Intent(WelcomeActivity.this,Landing.class);
@@ -111,7 +110,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             } else {
-                Toast.makeText(this,"Ignore Battery Optimisations and Restart Kaagaz",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Tap Ignore Battery Optimisations and Restart Kaagaz",Toast.LENGTH_LONG).show();
                 Intent i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
                 i.setData(Uri.parse("package:" + getPackageName()));
                 startActivity(i);

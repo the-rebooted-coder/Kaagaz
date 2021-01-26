@@ -1,10 +1,13 @@
 package com.aaxena.kaagaz;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.browser.customtabs.CustomTabsIntent;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -37,7 +40,21 @@ public class Settings extends AppCompatActivity {
         nope.setOnClickListener(v -> {
             Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
             vibe.vibrate(20);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             finish();
+        });
+
+        Button aboutDeveloper = findViewById(R.id.developerName);
+        aboutDeveloper.setOnClickListener(v -> {
+            Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+            vibe.vibrate(25);
+            String url = "https://spandansaxena.codes/";
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            builder.setToolbarColor(Color.parseColor("#1B1557"));
+            CustomTabsIntent customTabsIntent = builder.build();
+            builder.setShowTitle(true);
+            customTabsIntent.launchUrl(Settings.this, Uri.parse(url));
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
         
         Button yes = findViewById(R.id.yes);
