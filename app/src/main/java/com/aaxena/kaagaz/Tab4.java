@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
@@ -82,11 +83,18 @@ public class Tab4 extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view4 = inflater.inflate(R.layout.fragment_tab4, container, false);
-        ImageView imageViewa = view4.findViewById(R.id.imageView);
-        Glide.with(this).load(R.drawable.abs_eleven).centerCrop().into(imageViewa);
-        Button upButton = view4.findViewById(R.id.island);
+        Button upButton = view4.findViewById(R.id.kaagaz);
         LottieAnimationView loading_four;
         loading_four = view4.findViewById(R.id.setting_delay_four);
+        if (isFirstTime()) {
+            // Dialog Box
+            new AlertDialog.Builder(getActivity())
+                    .setTitle("Kaagaz")
+                    .setMessage("The Kaagaz wallpapers are simple geometrical and abstract figures that look astonishing on your home screen.\n\nCreated by Kaagaz for Kaagaz!")
+                    .setPositiveButton("Okay", (dialog, which) -> {
+                    })
+                    .create().show();
+        }
         upButton.setOnClickListener(new DoubleClick(new DoubleClickListener() {
             @Override
             public void onSingleClick(View view) {
@@ -99,7 +107,7 @@ public class Tab4 extends Fragment implements View.OnClickListener{
             public void onDoubleClick(View view) {
                 //FireNotif
                 makeNotif();
-                Button upButton = view4.findViewById(R.id.island);
+                Button upButton = view4.findViewById(R.id.kaagaz);
                 upButton.setVisibility(View.INVISIBLE);
                 loading_four.setVisibility(View.VISIBLE);
                 loading_four.playAnimation();
@@ -180,5 +188,16 @@ public class Tab4 extends Fragment implements View.OnClickListener{
             NotificationManager notificationManager = this.getContext().getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
+    }
+    private boolean isFirstTime() {
+        SharedPreferences preferences = this.getActivity().getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("RanBeforeKaagaz", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("RanBeforeKaagaz", true);
+            editor.commit();
+        }
+        return !ranBefore;
     }
 }

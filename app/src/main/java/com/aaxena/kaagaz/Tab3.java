@@ -99,8 +99,6 @@ public class Tab3 extends Fragment implements View.OnClickListener{
                 makeNotif();
                 Button upButton = view3.findViewById(R.id.moon);
                 upButton.setVisibility(View.INVISIBLE);
-                loading_three.setVisibility(View.VISIBLE);
-                loading_three.playAnimation();
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(28);
                 SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
@@ -113,6 +111,8 @@ public class Tab3 extends Fragment implements View.OnClickListener{
                             .setTitle("About Lunar Phase")
                             .setMessage(R.string.celestial_onetime)
                             .setPositiveButton("Okay", (dialog, which) -> {
+                                loading_three.setVisibility(View.VISIBLE);
+                                loading_three.playAnimation();
                                 Intent intent = new Intent(getActivity(), MainActivity.class);
                                 startActivity(intent);
                                 getActivity().finish();
@@ -120,6 +120,8 @@ public class Tab3 extends Fragment implements View.OnClickListener{
                             .create().show();
                 }
                 else{
+                    loading_three.setVisibility(View.VISIBLE);
+                    loading_three.playAnimation();
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent);
                     getActivity().finish();
