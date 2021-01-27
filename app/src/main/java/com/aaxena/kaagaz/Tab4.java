@@ -91,15 +91,9 @@ public class Tab4 extends Fragment implements View.OnClickListener{
             // Dialog Box
             AlertDialog.Builder ImageDialog = new AlertDialog.Builder(getContext())
                     .setCancelable(false);
-            ImageView showImage = new ImageView(getContext());
-            showImage.setImageResource(R.drawable.wall_e);
-            ImageDialog.setView(showImage);
-
-            ImageDialog.setNegativeButton("Fantastic!", new DialogInterface.OnClickListener()
-            {
-                public void onClick(DialogInterface arg0, int arg1)
-                {
-                }
+            ImageDialog.setTitle("Kaagaz Wallpapers are here!")
+                    .setMessage("The Kaagaz wallpapers are simple abstract and geometric wallpapers that change throughout the day.\n\nDeveloped by Kaagaz!");
+            ImageDialog.setNegativeButton("Fantastic!", (arg0, arg1) -> {
             });
             ImageDialog.show();
         }
