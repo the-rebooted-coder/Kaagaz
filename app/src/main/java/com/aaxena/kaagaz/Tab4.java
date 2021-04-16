@@ -130,27 +130,25 @@ public class Tab4 extends Fragment implements View.OnClickListener{
                     downloadTenFile();
                     downloadElevenFile();
                     downloadTweleveFile();
+                    Toast.makeText(getContext(),"Wallpapers are being downloaded, will be applied after download",Toast.LENGTH_LONG).show();
+                    makeNotif();
+                    Button upButton = view4.findViewById(R.id.kaagaz);
+                    upButton.setVisibility(View.INVISIBLE);
+                    loading_four.setVisibility(View.VISIBLE);
+                    loading_four.playAnimation();
+                    Vibrator vibrator = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                    vibrator.vibrate(28);
+                    SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString(TEXT,"kaagaz");
+                    editor.commit();
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
                 else {
                     Toast.makeText(getContext(),"Storage Permission Denied, Cannot Download Kaagaz Dynamic Wallpaper Pack",Toast.LENGTH_LONG).show();
                 }
-                /*
-                makeNotif();
-                Button upButton = view4.findViewById(R.id.kaagaz);
-                upButton.setVisibility(View.INVISIBLE);
-                loading_four.setVisibility(View.VISIBLE);
-                loading_four.playAnimation();
-                Vibrator vibrator = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-                vibrator.vibrate(28);
-                SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putString(TEXT,"kaagaz");
-                editor.commit();
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-
-                 */
             }
         }));
         return view4;
@@ -164,7 +162,7 @@ public class Tab4 extends Fragment implements View.OnClickListener{
         request.setTitle("Dynamic Wallpapers Pack Downloaded");
         request.setDescription("Kaagaz Originals");
         request.allowScanningByMediaScanner();
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"one"+".png");
         request.setMimeType("*/*");
         downloadManager.enqueue(request);
