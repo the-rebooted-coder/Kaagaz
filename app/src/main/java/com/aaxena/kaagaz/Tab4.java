@@ -1,15 +1,19 @@
 package com.aaxena.kaagaz;
 
+import android.app.DownloadManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,13 +25,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.bumptech.glide.Glide;
 import com.pedromassango.doubleclick.DoubleClick;
 import com.pedromassango.doubleclick.DoubleClickListener;
+import com.squareup.picasso.Picasso;
 
+import static android.content.Context.DOWNLOAD_SERVICE;
 import static android.content.Context.MODE_PRIVATE;
 import static android.graphics.Color.RED;
 
@@ -85,6 +91,9 @@ public class Tab4 extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         view4 = inflater.inflate(R.layout.fragment_tab4, container, false);
         Button upButton = view4.findViewById(R.id.kaagaz);
+        ImageView kaagazWallpaper;
+        kaagazWallpaper = view4.findViewById(R.id.imageViewKaagaz);
+        Picasso.get().load("https://i.ibb.co/Yy9rmTg/abs-1.png").into(kaagazWallpaper);
         LottieAnimationView loading_four;
         loading_four = view4.findViewById(R.id.setting_delay_four);
         if (isFirstTime()) {
@@ -108,6 +117,24 @@ public class Tab4 extends Fragment implements View.OnClickListener{
             @Override
             public void onDoubleClick(View view) {
                 //FireNotif
+                if (checkPermission()) {
+                    downloadFirstFile();
+                    downloadSecondFile();
+                    downloadThirdFile();
+                    downloadFourthFile();
+                    downloadFifthFile();
+                    downloadSixthFile();
+                    downloadSeventhFile();
+                    downloadEighthFile();
+                    downloadNineFile();
+                    downloadTenFile();
+                    downloadElevenFile();
+                    downloadTweleveFile();
+                }
+                else {
+                    Toast.makeText(getContext(),"Storage Permission Denied, Cannot Download Kaagaz Dynamic Wallpaper Pack",Toast.LENGTH_LONG).show();
+                }
+                /*
                 makeNotif();
                 Button upButton = view4.findViewById(R.id.kaagaz);
                 upButton.setVisibility(View.INVISIBLE);
@@ -122,9 +149,168 @@ public class Tab4 extends Fragment implements View.OnClickListener{
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
                 getActivity().finish();
+
+                 */
             }
         }));
         return view4;
+    }
+
+    public void downloadFirstFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/Yy9rmTg/abs-1.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Dynamic Wallpapers Pack Downloaded");
+        request.setDescription("Kaagaz Originals");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"one"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadSecondFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/vXJdrNY/abs-2.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"two"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadThirdFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/PrP32Kh/abs-3.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"three"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadFourthFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/b60t37Q/abs-4.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"four"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadFifthFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/5BY0TWf/abs-5.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"five"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadSixthFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/CBdG1kp/abs-6.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"six"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadSeventhFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/q7YbLx4/abs-7.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"seven"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadEighthFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/BGxHgdX/abs-8.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"eight"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadNineFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/bXLdqG6/abs-9.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"nine"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadTenFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/xmdSSKh/abs-10.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"ten"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadElevenFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/H2zH7Jv/abs-11.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"eleven"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+    public void downloadTweleveFile() {
+        Uri uri = Uri.parse("https://i.ibb.co/Scz5TQy/abs-12.png");
+        DownloadManager downloadManager = (DownloadManager) getActivity().getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI| DownloadManager.Request.NETWORK_MOBILE);
+        request.setTitle("Kaagaz Wallpaper Downloaded");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM,"/Kaagaz/"+"/KaagazOriginals/"+"twelve"+".png");
+        request.setMimeType("*/*");
+        downloadManager.enqueue(request);
+    }
+
+
+
+    private boolean checkPermission() {
+        int result = ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (result == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

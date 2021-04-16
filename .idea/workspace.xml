@@ -32,14 +32,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_side5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Kaagaz.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Kaagaz.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Tab4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/Tab4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/WelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aaxena/kaagaz/WelcomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.225.128:5555]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -102,6 +125,11 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
+      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\layout" />
+    </key>
     <key name="android.template.packageName">
       <recent name="com.aaxena.kaagaz" />
     </key>
@@ -110,11 +138,6 @@
     </key>
     <key name="android.template.655945378">
       <recent name="com.aaxena.kaagaz" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
-      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\drawable" />
-      <recent name="C:\Users\raffl\Documents\GitHub\Kaagaz\app\src\main\res\layout" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.aaxena.kaagaz" />
@@ -232,29 +255,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="346" y="211" key="AndroidCreateResourceFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1611516334239" />
-    <state x="534" y="234" key="AndroidCreateXmlResourceDialog" timestamp="1611678768712">
+    <state x="534" y="234" key="AndroidCreateXmlResourceDialog" timestamp="1618560460862">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="534" y="234" key="AndroidCreateXmlResourceDialog/0.0.1440.900@0.0.1440.900" timestamp="1611678768712" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1611660138756">
-      <screen x="0" y="23" width="1440" height="781" />
+    <state x="534" y="234" key="AndroidCreateXmlResourceDialog/0.0.1440.900@0.0.1440.900" timestamp="1618560460862" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1618563676915">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611658814326" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618563676915" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.781@0.23.1440.781" timestamp="1611660138756" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1611660138752">
-      <screen x="0" y="23" width="1440" height="781" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1618563676914">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611658814324" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618563676914" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.781@0.23.1440.781" timestamp="1611660138752" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1611660138751">
-      <screen x="0" y="23" width="1440" height="781" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1618563676913">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611658814324" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618563676913" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.781@0.23.1440.781" timestamp="1611660138751" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1611660138754">
-      <screen x="0" y="23" width="1440" height="781" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1618563676914">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611658814325" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618563676914" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.781@0.23.1440.781" timestamp="1611660138754" />
     <state x="308" y="200" key="IDE.errors.dialog" timestamp="1611251571451">
       <screen x="0" y="0" width="1440" height="900" />
@@ -268,9 +291,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="472" y="331" width="618" height="269" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1440.900@0.0.1440.900" timestamp="1611416340582" />
-    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup" timestamp="1611489527627">
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup" timestamp="1618558903627">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1611489527627" />
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1618558903627" />
   </component>
 </project>

@@ -2,14 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/abs_eleven">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewKaagaz"
         android:layout_width="match_parent"
+        android:scaleType="centerCrop"
         android:layout_height="match_parent"
-        android:contentDescription="@string/moon_background"
+        android:contentDescription="@string/kaagaz_wallpapers"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

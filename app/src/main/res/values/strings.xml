@@ -49,4 +49,8 @@
     <string name="yes">Yes</string>
     <string name="nope">Nope</string>
     <string name="image_of_app">Image of App</string>
+    <string name="kaagaz_wallpapers">Kaagaz Wallpapers</string>
+    <string name="grant_permissions">Grant Permissions</string>
+    <string name="kaagaz_needs_storage_permissions_to_download_dynamic_wallpapers">Kaagaz needs Storage Permissions to Download Dynamic Wallpapers</string>
+    <string name="go_ahead_to_grant_permissions">Go Ahead to Grant Permissions</string>
 </resources>
