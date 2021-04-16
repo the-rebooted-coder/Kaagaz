@@ -31,7 +31,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="" />
+    <list default="true" id="e3465eb7-1e50-444d-9585-6ac2451b79d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
