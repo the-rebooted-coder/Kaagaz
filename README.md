@@ -4,7 +4,7 @@
 [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 <br>
 
-## A Repository Consisting of an Android Package that changes wallpaper of any android device running (Nougat & +) throughout by the time of the day and the timezone
+## A Repository Containing an Android Studio Package that changes wallpaper of any android device running (Nougat & +) throughout by the time of the day and the timezone
 <br>
 <p>Created by the virtue of a Simple Idea, "Can't Android Phones Have a Simple Dynamic Background?"</p>
 <br>
